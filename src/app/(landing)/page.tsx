@@ -6,12 +6,14 @@ import {Features} from "@/src/client/components/screens/landing/05-Features"
 import {Footer} from "@/src/client/components/screens/landing/06-footer";
 
 export default function landing(){
-    return <>
-        <Hero/>
-        <Ikigai/>
-        <Problem/>
-        <Community/>
-        <Features/>
-        <Footer/>
-    </>
+    return (
+        <main className="overflow-x-hidden">
+            <Hero/>
+            <Ikigai/>
+            <Problem/>
+            <Community/>
+            <Features/>
+            <Footer/>
+        </main>
+    )
 }
