@@ -1,0 +1,82 @@
+@import "tailwindcss";
+
+:root {
+  /* ===========================
+     Brand
+  =========================== */
+
+  --color-primary: #F59E38;
+  --color-primary-hover: #E88819;
+  --color-primary-light: #FBD19A;
+
+  /* ===========================
+     Surfaces
+  =========================== */
+
+  --color-background: #F7F4ED;
+  --color-surface: #FFFCF7;
+  --color-surface-subtle: #EFE9DD;
+  --color-border: #DDD6CA;
+
+  /* ===========================
+     Typography
+  =========================== */
+
+  --color-text: #1F2933;
+  --color-text-secondary: #5B6470;
+  --color-text-muted: #8F8C86;
+
+  /* ===========================
+     Status
+  =========================== */
+
+  --color-success: #2E9B63;
+  --color-warning: #F59E38;
+  --color-error: #D94A4A;
+  --color-info: #3D7EA6;
+}
+
+@theme inline {
+  /* Colors */
+  --color-background: var(--color-background);
+  --color-surface: var(--color-surface);
+  --color-surface-subtle: var(--color-surface-subtle);
+
+  --color-primary: var(--color-primary);
+  --color-primary-hover: var(--color-primary-hover);
+  --color-primary-light: var(--color-primary-light);
+
+  --color-border: var(--color-border);
+
+  --color-text: var(--color-text);
+  --color-text-secondary: var(--color-text-secondary);
+  --color-text-muted: var(--color-text-muted);
+
+  --color-success: var(--color-success);
+  --color-warning: var(--color-warning);
+  --color-error: var(--color-error);
+  --color-info: var(--color-info);
+
+  /* Fonts */
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--color-background);
+  color: var(--color-text);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
