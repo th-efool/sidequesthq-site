@@ -1,3 +1,9 @@
 export function Hero() {
- return <></>
+  return <section
+      id="hero"
+      className="relative min-h-screen overflow-hidden"
+  >
+
+
+  </section>
 }

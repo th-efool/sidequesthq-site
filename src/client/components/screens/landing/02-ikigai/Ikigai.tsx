@@ -1,3 +1,9 @@
 export function Ikigai(){
-    return "Ikigai";
+    return <section
+        id="ikigai"
+        className="relative min-h-screen overflow-hidden"
+    >
+
+
+    </section>
 }

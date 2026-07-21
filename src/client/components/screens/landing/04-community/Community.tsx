@@ -1,3 +1,9 @@
 export function Community() {
- return <></>
+ return <section
+     id="community"
+     className="relative min-h-screen overflow-hidden"
+ >
+
+
+ </section>
 }

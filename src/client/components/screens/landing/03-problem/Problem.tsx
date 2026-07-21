@@ -1,3 +1,9 @@
 export function Problem() {
-    return <></>
+    return <section
+        id="problem"
+        className="relative min-h-screen overflow-hidden"
+    >
+
+
+    </section>
 }
