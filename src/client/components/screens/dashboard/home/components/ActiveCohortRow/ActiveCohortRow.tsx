@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Clock3, GripVertical, MoreHorizontal, Pause, Sparkles } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 
@@ -116,11 +117,11 @@ export function ActiveCohortRow({
 
             <span className={styles.rank}>{item.rank}</span>
 
-            <img className={styles.thumbnail} src={item.thumbnail} alt="" />
+            <Link className={styles.thumbnailLink} href={`/cohort/${item.id}`} aria-label={`Open ${item.title}`}><img className={styles.thumbnail} src={item.thumbnail} alt="" /></Link>
 
             <div className={styles.course}>
                 <h3 className={styles.title}>
-                    {item.title}
+                    <Link href={`/cohort/${item.id}`}>{item.title}</Link>
                     {item.featured && <Sparkles size={15} strokeWidth={2.5} className={styles.sparkle} />}
                 </h3>
                 <p className={styles.provider}>{item.provider}</p>

@@ -1,0 +1,209 @@
+.section {
+    border: 1px solid var(--color-border);
+    border-radius: 22px;
+    background: var(--color-surface);
+    box-shadow: 0 14px 34px rgba(15, 23, 42, .05);
+    scroll-margin-top: var(--space-6);
+}
+
+.header {
+    padding: var(--space-5) var(--space-5) 0;
+}
+
+.header span,
+.moduleHeader strong {
+    color: var(--color-brand);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.header h2 {
+    margin: 6px 0;
+    color: var(--color-text-primary);
+    font-size: 1.35rem;
+    letter-spacing: -.03em;
+}
+
+.header p,
+.moduleHeader p,
+.lesson p {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    font-weight: 650;
+    line-height: 1.45;
+}
+
+.header p,
+.moduleHeader p {
+    margin: 0;
+}
+
+.modules {
+    display: grid;
+    gap: var(--space-3);
+    padding: var(--space-5);
+}
+
+.module {
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--color-surface);
+    transition: border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.module:hover,
+.currentModule {
+    border-color: rgba(79, 70, 229, .28);
+    box-shadow: 0 16px 36px rgba(15, 23, 42, .07);
+}
+
+.currentModule {
+    background: linear-gradient(135deg, var(--color-surface), var(--color-brand-subtle));
+}
+
+.moduleHeader {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 118px auto auto;
+    align-items: center;
+    gap: var(--space-3);
+    width: 100%;
+    padding: var(--space-4);
+    border: 0;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+}
+
+.moduleHeader:focus-visible,
+.lesson:focus-visible {
+    outline: 3px solid rgba(79, 70, 229, .28);
+    outline-offset: -3px;
+}
+
+.moduleHeader h3 {
+    margin: 0 0 5px;
+    color: var(--color-text-primary);
+    font-size: 1.05rem;
+    letter-spacing: -.02em;
+}
+
+.moduleProgress {
+    overflow: hidden;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--color-surface-tertiary);
+}
+
+.moduleProgress span {
+    display: block;
+    height: 100%;
+    border-radius: inherit;
+    background: var(--color-brand);
+    transform-origin: left;
+    animation: fillIn 680ms ease both;
+}
+
+.chevronOpen {
+    transform: rotate(180deg);
+}
+
+.lessons {
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 240ms ease;
+}
+
+.lessonsOpen {
+    grid-template-rows: 1fr;
+}
+
+.lessons > div {
+    overflow: hidden;
+}
+
+.lesson {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) auto auto;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    border-top: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+
+.lesson:hover {
+    background: rgba(79, 70, 229, .04);
+}
+
+.lesson svg {
+    color: var(--color-brand);
+}
+
+.lesson strong {
+    color: var(--color-text-primary);
+    font-size: 14px;
+}
+
+.lesson p {
+    margin: 4px 0 0;
+}
+
+.lesson span,
+.lesson em {
+    color: var(--color-text-secondary);
+    font-size: 12px;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.complete svg {
+    color: var(--color-success);
+}
+
+.inProgress {
+    background: rgba(79, 70, 229, .08);
+    box-shadow: inset 3px 0 0 var(--color-brand);
+}
+
+.locked {
+    opacity: .58;
+}
+
+@keyframes fillIn {
+    from { transform: scaleX(0); }
+    to { transform: scaleX(1); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .module,
+    .lesson,
+    .lessons,
+    .moduleProgress span {
+        transition: none;
+        animation: none;
+    }
+}
+
+@media (max-width: 760px) {
+    .moduleHeader {
+        grid-template-columns: minmax(0, 1fr) auto;
+    }
+
+    .moduleProgress,
+    .moduleHeader strong {
+        grid-column: 1 / -1;
+    }
+
+    .lesson {
+        grid-template-columns: 24px minmax(0, 1fr);
+    }
+
+    .lesson span,
+    .lesson em {
+        grid-column: 2;
+    }
+}

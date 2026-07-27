@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./SideQuestCard.module.css";
 
 import type { SideQuest } from "../../models";
@@ -26,8 +28,8 @@ export function SideQuestCard({
                                                 subtitleLength <= 52 ? 200 :
                                                     228;
     return (
-        <button
-            type="button"
+        <Link
+            href={`/cohort/${item.id}`}
             className={styles.card}
         >
             <img
@@ -83,6 +85,6 @@ export function SideQuestCard({
 
             </div>
 
-        </button>
+        </Link>
     );
 }

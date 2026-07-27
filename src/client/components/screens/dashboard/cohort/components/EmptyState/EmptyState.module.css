@@ -1,0 +1,29 @@
+.empty {
+    padding: var(--space-6);
+    border: 1px dashed rgba(79, 70, 229, .28);
+    border-radius: 18px;
+    background: linear-gradient(135deg, rgba(79, 70, 229, .055), rgba(245, 158, 11, .045));
+}
+
+.empty span {
+    color: var(--color-brand);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.empty h3 {
+    margin: var(--space-2) 0 var(--space-1);
+    color: var(--color-text-primary);
+    font-size: 1.2rem;
+    letter-spacing: -.02em;
+}
+
+.empty p {
+    margin: 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    font-weight: 650;
+    line-height: 1.5;
+}

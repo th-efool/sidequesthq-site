@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 import styles from "./ContinueExploringCard.module.css";
 
 import type { ContinueExploringItem } from "../../models";
@@ -12,8 +14,8 @@ export function ContinueExploringCard({
                                           item,
                                       }: ContinueExploringCardProps) {
     return (
-        <button
-            type="button"
+        <Link
+            href={`/cohort/${item.id}`}
             className={styles.card}
         >
             <div
@@ -49,6 +51,6 @@ export function ContinueExploringCard({
 
 
             </div>
-        </button>
+        </Link>
     );
 }

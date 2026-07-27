@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { PartyPopper } from "lucide-react";
 
 import type { CompletedCourse } from "../../models";
@@ -11,10 +12,10 @@ export interface CompletedCourseCardProps {
 export function CompletedCourseCard({ item }: CompletedCourseCardProps) {
     return (
         <article className={styles.card}>
-            <img className={styles.thumbnail} src={item.thumbnail} alt="" />
+            <Link className={styles.thumbnailLink} href={`/cohort/${item.id}`} aria-label={`Open ${item.title}`}><img className={styles.thumbnail} src={item.thumbnail} alt="" /></Link>
 
             <div className={styles.content}>
-                <h3 className={styles.title}>{item.title}</h3>
+                <h3 className={styles.title}><Link href={`/cohort/${item.id}`}>{item.title}</Link></h3>
                 <p className={styles.meta}>{item.completedLabel}</p>
             </div>
 

@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { useRouter } from "next/navigation";
 import { KeyboardEvent } from "react";
 
 import { ConversationPreview } from "../../../models";
@@ -10,7 +11,15 @@ interface Props {
 }
 
 export function ConversationItem({ conversation, onSelect }: Props) {
-    const select = () => onSelect(conversation);
+    const router = useRouter();
+    const select = () => {
+        if (conversation.kind === "community") {
+            router.push(`/cohort/${conversation.id}`);
+            return;
+        }
+
+        onSelect(conversation);
+    };
     const onKeyDown = (event: KeyboardEvent<HTMLElement>) => {
         if (event.key !== "Enter" && event.key !== " ") return;
         event.preventDefault();

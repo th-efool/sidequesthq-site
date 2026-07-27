@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Bookmark, Users } from "lucide-react";
 
 import type { ArticlePreview } from "../../models";
@@ -14,11 +15,11 @@ export function ArticleCard({
     return (
         <article className={styles.card}>
 
-            <img
+            <Link className={styles.thumbnailLink} href={`/cohort/${item.id}`} aria-label={`Open ${item.title}`}><img
                 src={item.thumbnail}
                 alt=""
                 className={styles.thumbnail}
-            />
+            /></Link>
 
             <div className={styles.content}>
 
@@ -27,7 +28,7 @@ export function ArticleCard({
                     <div>
 
                         <h3 className={styles.title}>
-                            {item.title}
+                            <Link href={`/cohort/${item.id}`}>{item.title}</Link>
                         </h3>
 
                         <p className={styles.author}>

@@ -111,4 +111,4 @@
     background: var(--color-brand-hover);
 
     transition: width 300ms ease;
-}
+}.card{text-decoration:none;color:inherit}

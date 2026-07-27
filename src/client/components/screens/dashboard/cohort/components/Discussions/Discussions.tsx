@@ -1,0 +1,5 @@
+import Link from "next/link";
+import { Heart, MessageCircle } from "lucide-react";
+import type { DiscussionPreview } from "../../models/cohort";
+import styles from "./Discussions.module.css";
+export function Discussions({ discussions }: { discussions: DiscussionPreview[] }) { const unread = discussions.reduce((total, item) => total + item.unreadCount, 0); const top = [...discussions].sort((a, b) => b.likedCount - a.likedCount)[0]; return <section className={styles.section}><div className={styles.header}><div><span>Discussion preview</span><h2>Community signal</h2><p>{unread} unread replies · most liked question: {top?.title}</p></div><Link href="/message">View full discussion</Link></div><div className={styles.list}>{discussions.map((discussion) => <article className={styles.item} key={discussion.id}><img src={discussion.author.avatar} alt="" /><div><strong>{discussion.title}</strong><p>{discussion.author.name} · {discussion.latestActivity}</p></div><span><MessageCircle size={14} /> {discussion.replyCount}</span><span><Heart size={14} /> {discussion.likedCount}</span></article>)}</div></section>; }

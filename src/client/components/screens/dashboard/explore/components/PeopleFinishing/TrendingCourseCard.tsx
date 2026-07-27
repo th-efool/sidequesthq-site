@@ -1,3 +1,4 @@
+import Link from "next/link";
 import {
     Flame,
     Star,
@@ -90,12 +91,12 @@ export function TrendingCourseCard({
 
                     </div>
 
-                    <button
+                    <Link
                         className={styles.join}
-                        type="button"
+                        href={`/cohort/${item.id}`}
                     >
                         Join
-                    </button>
+                    </Link>
 
                 </div>
 
