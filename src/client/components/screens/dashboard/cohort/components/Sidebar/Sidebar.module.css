@@ -1,0 +1,22 @@
+.sidebar { position: sticky; top: var(--space-5); display: grid; gap: var(--space-4); }
+.panel { padding: var(--space-4); border: 1px solid var(--color-border); border-radius: 20px; background: var(--color-surface); box-shadow: 0 12px 28px rgba(15,23,42,.045); transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease; }
+.panel:hover { transform: translateY(-2px); border-color: rgba(79,70,229,.22); box-shadow: 0 16px 34px rgba(15,23,42,.07); }
+.panel h3 { display: flex; align-items: center; gap: var(--space-2); margin: 0 0 var(--space-3); color: var(--color-text-primary); font-size: 1rem; }
+.panel p, .panel a, .row span { margin: var(--space-2) 0 0; color: var(--color-text-secondary); font-size: 13px; font-weight: 650; line-height: 1.45; }
+.panel a { display: block; color: var(--color-brand); text-decoration: none; font-weight: 850; }
+.panel > strong { display: block; color: var(--color-text-primary); font-size: 1.05rem; }
+.panel button { width: 100%; height: 40px; margin-top: var(--space-4); border: 0; border-radius: 12px; background: var(--color-brand); color: #fff; font-weight: 900; cursor: pointer; transition: background 160ms ease, transform 120ms ease; }
+.panel button:hover, .panel button:focus-visible { background: var(--color-brand-hover); }
+.panel button:active { transform: translateY(1px); }
+.big { color: var(--color-brand); font-size: 2.2rem; font-weight: 900; line-height: 1; }
+.friends { display: grid; gap: var(--space-3); }
+.friends div { display: flex; align-items: center; gap: var(--space-3); }
+.friends img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; }
+.friends span { display: grid; color: var(--color-text-primary); font-size: 14px; font-weight: 800; }
+.friends small { color: var(--color-text-secondary); font-size: 12px; font-weight: 650; }
+.row { padding: var(--space-3) 0; border-top: 1px solid var(--color-border); }
+.row strong { display: block; color: var(--color-text-primary); font-size: 14px; }
+@media (max-width: 1120px) { .sidebar { position: static; grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 720px) { .sidebar { grid-template-columns: 1fr; } }
+
+@media (prefers-reduced-motion: reduce) { .panel, .panel button { transition: none; } }

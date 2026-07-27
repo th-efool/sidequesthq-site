@@ -1,0 +1,98 @@
+.card {
+    display: grid;
+    grid-template-columns: 44px 1fr;
+    gap: var(--space-3);
+    padding: var(--space-4);
+    border: 1px solid var(--color-border);
+    border-radius: 18px;
+    background: var(--color-surface);
+    transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.card:hover,
+.card:focus-within {
+    transform: translateY(-2px);
+    border-color: rgba(79, 70, 229, .25);
+    box-shadow: 0 16px 34px rgba(15, 23, 42, .08);
+}
+
+.icon {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 14px;
+    background: var(--color-brand-subtle);
+    color: var(--color-brand);
+}
+
+.body {
+    min-width: 0;
+}
+
+.top,
+.footer {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+}
+
+.top {
+    justify-content: space-between;
+}
+
+.top span,
+.footer em {
+    color: var(--color-brand);
+    font-size: 12px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: .08em;
+}
+
+.top time,
+.card p,
+.footer strong {
+    color: var(--color-text-secondary);
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.card h3 {
+    margin: 8px 0 6px;
+    color: var(--color-text-primary);
+    font-size: 1.05rem;
+    letter-spacing: -.02em;
+}
+
+.card p {
+    margin: 0 0 var(--space-3);
+    line-height: 1.45;
+}
+
+.footer {
+    flex-wrap: wrap;
+}
+
+.footer button {
+    margin-left: auto;
+    height: 34px;
+    padding: 0 var(--space-3);
+    border: 1px solid var(--color-border);
+    border-radius: 10px;
+    background: var(--color-surface);
+    color: var(--color-brand);
+    font-weight: 850;
+    cursor: pointer;
+    transition: border-color 160ms ease, background 160ms ease, transform 120ms ease;
+}
+
+.footer button:hover,
+.footer button:focus-visible {
+    border-color: var(--color-brand);
+    background: var(--color-brand-subtle);
+}
+
+.footer button:active {
+    transform: translateY(1px);
+}

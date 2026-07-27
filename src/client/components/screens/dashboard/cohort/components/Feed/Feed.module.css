@@ -1,0 +1,6 @@
+.section { border: 1px solid var(--color-border); border-radius: 22px; background: var(--color-surface-secondary); padding: var(--space-5); }
+.header { margin-bottom: var(--space-4); }
+.header span { color: var(--color-brand); font-size: 12px; font-weight: 900; text-transform: uppercase; letter-spacing: .08em; }
+.header h2 { margin: 6px 0; color: var(--color-text-primary); font-size: 1.35rem; letter-spacing: -.03em; }
+.header p { margin: 0; color: var(--color-text-secondary); font-size: 14px; font-weight: 650; }
+.timeline { display: grid; gap: var(--space-3); }
