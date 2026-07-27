@@ -114,6 +114,8 @@
 │   │   │       └── page.tsx
 │   │   ├── (dashboard)/
 │   │   │   ├── cohort/
+│   │   │   │   ├── [id]/
+│   │   │   │   │   └── page.tsx
 │   │   │   │   └── page.tsx
 │   │   │   ├── explore/
 │   │   │   │   └── page.tsx
@@ -223,6 +225,62 @@
 │   │   │   │   │   ├── Auth.tsx
 │   │   │   │   │   └── index.ts
 │   │   │   │   ├── dashboard/
+│   │   │   │   │   ├── cohort/
+│   │   │   │   │   │   ├── components/
+│   │   │   │   │   │   │   ├── ContinueLearning/
+│   │   │   │   │   │   │   │   ├── ContinueLearning.module.css
+│   │   │   │   │   │   │   │   └── ContinueLearning.tsx
+│   │   │   │   │   │   │   ├── Curriculum/
+│   │   │   │   │   │   │   │   ├── Curriculum.module.css
+│   │   │   │   │   │   │   │   └── Curriculum.tsx
+│   │   │   │   │   │   │   ├── Discussions/
+│   │   │   │   │   │   │   │   ├── Discussions.module.css
+│   │   │   │   │   │   │   │   └── Discussions.tsx
+│   │   │   │   │   │   │   ├── EmptyState/
+│   │   │   │   │   │   │   │   ├── EmptyState.module.css
+│   │   │   │   │   │   │   │   └── EmptyState.tsx
+│   │   │   │   │   │   │   ├── Feed/
+│   │   │   │   │   │   │   │   ├── Feed.module.css
+│   │   │   │   │   │   │   │   └── Feed.tsx
+│   │   │   │   │   │   │   ├── FeedCards/
+│   │   │   │   │   │   │   │   ├── FeedCard.module.css
+│   │   │   │   │   │   │   │   └── FeedCard.tsx
+│   │   │   │   │   │   │   ├── Header/
+│   │   │   │   │   │   │   │   ├── Header.module.css
+│   │   │   │   │   │   │   │   └── Header.tsx
+│   │   │   │   │   │   │   ├── Hero/
+│   │   │   │   │   │   │   │   ├── Hero.module.css
+│   │   │   │   │   │   │   │   └── Hero.tsx
+│   │   │   │   │   │   │   ├── Insights/
+│   │   │   │   │   │   │   │   ├── Insights.module.css
+│   │   │   │   │   │   │   │   └── Insights.tsx
+│   │   │   │   │   │   │   ├── LessonPlayer/
+│   │   │   │   │   │   │   │   ├── LessonPlayer.module.css
+│   │   │   │   │   │   │   │   └── LessonPlayer.tsx
+│   │   │   │   │   │   │   ├── Progress/
+│   │   │   │   │   │   │   │   ├── Progress.module.css
+│   │   │   │   │   │   │   │   └── Progress.tsx
+│   │   │   │   │   │   │   ├── Related/
+│   │   │   │   │   │   │   │   ├── Related.module.css
+│   │   │   │   │   │   │   │   └── Related.tsx
+│   │   │   │   │   │   │   ├── Resources/
+│   │   │   │   │   │   │   │   ├── Resources.module.css
+│   │   │   │   │   │   │   │   └── Resources.tsx
+│   │   │   │   │   │   │   ├── Sidebar/
+│   │   │   │   │   │   │   │   ├── Sidebar.module.css
+│   │   │   │   │   │   │   │   └── Sidebar.tsx
+│   │   │   │   │   │   │   └── Skeleton/
+│   │   │   │   │   │   │       ├── Skeleton.module.css
+│   │   │   │   │   │   │       └── Skeleton.tsx
+│   │   │   │   │   │   ├── hooks/
+│   │   │   │   │   │   │   └── useCohort.ts
+│   │   │   │   │   │   ├── mock/
+│   │   │   │   │   │   │   └── cohort.ts
+│   │   │   │   │   │   ├── models/
+│   │   │   │   │   │   │   └── cohort.ts
+│   │   │   │   │   │   ├── Cohort.module.css
+│   │   │   │   │   │   ├── Cohort.tsx
+│   │   │   │   │   │   └── index.ts
 │   │   │   │   │   ├── explore/
 │   │   │   │   │   │   ├── components/
 │   │   │   │   │   │   │   ├── BrowseTopics/
@@ -663,4 +721,4 @@
 ├── postcss.config.mjs
 └── tsconfig.json
 
-192 directories, 470 files
+213 directories, 507 files
