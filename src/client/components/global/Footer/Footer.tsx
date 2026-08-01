@@ -94,7 +94,7 @@ const companyLinks = [
   {
     icon: <ShieldCheck size={16} />,
     label: 'Privacy',
-    href: '#',
+    href: '/policy',
   },
   {
     icon: <MessageCircle size={16} />,
