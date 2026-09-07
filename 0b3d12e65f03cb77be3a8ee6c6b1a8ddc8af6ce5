@@ -1,0 +1,14 @@
+Phase 4 — Block/MD Note Creation Buttons
+
+WHAT:
+- Added 'New Block Note' button alongside existing Canvas/Kanban buttons in SpaceHeader.tsx
+- Added BlockNote creation option to WorkspaceSection.tsx empty state
+- Added to WorkspaceScreen.tsx mobile menu
+- Added to NotesWorkspace.tsx empty state fallback
+
+WHY:
+The only way to create a block/markdown note was programmatically. There was no
+UI affordance for users to select note type. This surfaces the contentType='markdown'
+creation path for the BlockNote+Hocuspocus collaborative editor.
+
+FILES: SpaceHeader.tsx, WorkspaceSection.tsx, NotesWorkspace.tsx, WorkspaceScreen.tsx
