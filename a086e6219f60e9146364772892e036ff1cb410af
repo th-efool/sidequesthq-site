@@ -1,0 +1,19 @@
+Phase 7 + 8 — Premium Editor Layout & Content-Type Sidebar Icons
+
+WHAT:
+- NotesBlockEditor.module.css: added solid #000000 background to hide dotted canvas grid
+- NotesBlockEditor.module.css: applied max-width 800px centered layout (Notion-style)
+- WorkspaceSection.tsx: replaced hardcoded <FileText> icon with conditional render:
+    canvas -> SquarePen, kanban -> Layout, markdown -> FileText
+- RecentlyClosedSection.tsx: same conditional icon logic as above
+- useRecentlyClosedNotes.ts: added contentType field to RecentlyClosedNote interface
+- NotesSidebar.tsx: passes selectedNote.contentType into useRecentlyClosedNotes hook
+
+WHY:
+The sidebar showed FileText for every note regardless of type, making it impossible
+to visually distinguish canvas/kanban/markdown notes at a glance. The block editor
+was rendered inside the canvas container (.workspace) which has a radial dot-grid
+background — applying a solid black bg to the editor container masks this.
+
+FILES: NotesBlockEditor.module.css, NotesBlockEditor.tsx, WorkspaceSection.tsx,
+       RecentlyClosedSection.tsx, useRecentlyClosedNotes.ts, NotesSidebar.tsx
