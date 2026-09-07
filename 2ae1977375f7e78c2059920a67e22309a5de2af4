@@ -1,0 +1,20 @@
+fix(kanban): resolve infinite render loop and restore native inline card creation
+
+WHAT:
+- ColIdInjector: fixed dependency-less useEffect that called setHeaders unconditionally
+  every render cycle — added deep equality check so setState only fires when DOM
+  headers actually change (length or id mismatch)
+- Removed custom sqhq-custom-add-btn portal injection from column headers
+- Removed addCard() callback and CardEditor modal triggered from column header
+- Removed CSS rule hiding .wx-add (SVAR's native inline add button) via display:none
+- NotesKanban cardContent: mapped props.card.text -> card.label so natively created
+  SVAR cards are not blank when they appear in our custom KanbanCard renderer
+
+WHY:
+The ColIdInjector ran setHeaders inside setTimeout with no deps every 50ms causing
+React's reconciler to loop continuously, producing severe input lag and interaction
+freezes across the entire board. The custom add modal was also anti-native —
+replacing SVAR's built-in inline card creation with a center-screen floating form
+broke the expected Trello/Linear workflow of typing a title and pressing Enter.
+
+FILES: NotesKanban.tsx, kanban-dark.css
