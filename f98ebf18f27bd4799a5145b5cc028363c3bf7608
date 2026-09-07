@@ -1,0 +1,26 @@
+style(block-editor): full-width pure black editor — no visible bounds
+
+WHAT:
+- NotesBlockEditor.module.css: removed max-width:800px and display:flex/justify-content:center
+  so editor fills the entire workspace area instead of a narrow centered column
+- NotesBlockEditor.module.css: added width:100% + min-height:100% to :global(.bn-container)
+  and sibling mantine selectors to eliminate the grey rounded-box shell
+- NotesBlockEditor.tsx: replaced theme='dark' string with PURE_BLACK_THEME object that
+  overrides BlockNote's color tokens at source:
+    colors.editor.background = '#000000'  (was ~#1a1a1a grey)
+    colors.menu.background   = '#111111'
+    All highlight backgrounds use rgba overlays on black base
+  borderRadius set to 4 (sharp, not pill-shaped)
+
+WHY:
+BlockNote's built-in dark theme renders a grey rounded rectangle for the editor
+surface. No CSS selector reliably overrides this because the background is applied
+via CSS custom properties (--bn-colors-editor-background) injected by the React
+component at render time. Passing a custom theme object is the documented API
+and is the only reliable override path.
+
+The previous max-width:800px centering was added to mimic a document editor but
+made the block note look like a floating widget inside a black void. The user's
+intent is full-screen document — no visible box, no boundaries.
+
+FILES: NotesBlockEditor.tsx, NotesBlockEditor.module.css
