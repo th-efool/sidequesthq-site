@@ -1,0 +1,16 @@
+Phase 5 + 6 — Kanban Empty State & Column Management
+
+WHAT:
+- Cleared INITIAL_CARDS in seedNotesData.ts so new Kanban notes start empty
+- Removed dummy placeholder cards that appeared on every new board
+- Injected custom trash buttons into SVAR Kanban column headers via React portals (ColIdInjector)
+- Implemented inline column rename: double-click title -> native input replaces label text
+- Implemented column deletion: trash button removes column and all its cards atomically
+
+WHY:
+SVAR React Kanban (@svar-ui/react-kanban) has no API for custom column header templates.
+We bypassed this by using DOM mutation + ReactDOM.createPortal to inject buttons into
+.wx-column-header elements. The SVAR native 'add column' modal was replaced with
+direct inline editing to match a native desktop app feel (Trello/Linear-style).
+
+FILES: NotesKanban.tsx, seedNotesData.ts, kanban-dark.css
