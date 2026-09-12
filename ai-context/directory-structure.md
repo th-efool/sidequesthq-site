@@ -1648,6 +1648,7 @@
 │   │   │   │   └── .gitkeep
 │   │   │   ├── auth/
 │   │   │   │   ├── auth.config.ts
+│   │   │   │   ├── auth.edge.ts
 │   │   │   │   ├── getUser.ts
 │   │   │   │   └── requireUser.ts
 │   │   │   ├── db/
@@ -1741,4 +1742,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-549 directories, 1191 files
+549 directories, 1192 files
