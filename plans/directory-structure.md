@@ -360,7 +360,10 @@
 │   ├── reference-analysis.md
 │   ├── reference.jpg
 │   ├── render-preview-1024.png
-│   └── render-preview-1440.png
+│   ├── render-preview-1440.png
+│   ├── render-preview-dark.png
+│   ├── render-preview-light.png
+│   └── test-divider-transparent.png
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -599,6 +602,7 @@
 │   ├── undone-logo.ico
 │   ├── undone-logo.png
 │   └── undone-logo.svg
+├── scratch/
 ├── scripts/
 │   ├── db-backup.mjs
 │   ├── download-real-assets.mjs
@@ -740,6 +744,43 @@
 │   │   ├── globals.css
 │   │   └── layout.tsx
 │   ├── client/
+│   │   ├── archive/
+│   │   │   └── landing/
+│   │   │       ├── 01-hero/
+│   │   │       │   ├── Hero.module.css
+│   │   │       │   ├── Hero.tsx
+│   │   │       │   ├── heroContent.module.css
+│   │   │       │   ├── heroContent.tsx
+│   │   │       │   ├── heroFloatingContentIcons.module.css
+│   │   │       │   ├── heroFloatingContentIcons.tsx
+│   │   │       │   ├── heroNavbar.module.css
+│   │   │       │   ├── heroNavbar.tsx
+│   │   │       │   ├── heroScene.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── 02-ikigai/
+│   │   │       │   ├── CalendarMonth/
+│   │   │       │   │   ├── calendarData.ts
+│   │   │       │   │   ├── CalendarMonth.module.css
+│   │   │       │   │   ├── CalendarMonth.tsx
+│   │   │       │   │   ├── calendarMonth.types.ts
+│   │   │       │   │   ├── calendarTypes.ts
+│   │   │       │   │   └── calendarUtils.ts
+│   │   │       │   ├── FeatureSection.module.css
+│   │   │       │   ├── FeatureSection.tsx
+│   │   │       │   ├── Ikigai.tsx
+│   │   │       │   ├── ikigaiTimeline.module.css
+│   │   │       │   ├── ikigaiTimeline.tsx
+│   │   │       │   ├── index.ts
+│   │   │       │   ├── learningList.module.css
+│   │   │       │   ├── learningList.tsx
+│   │   │       │   ├── ProgressSection.module.css
+│   │   │       │   └── ProgressSection.tsx
+│   │   │       ├── 05-Features/
+│   │   │       │   ├── Features.tsx
+│   │   │       │   └── index.ts
+│   │   │       └── 06-footer/
+│   │   │           ├── Footer.tsx
+│   │   │           └── index.ts
 │   │   ├── components/
 │   │   │   ├── global/
 │   │   │   │   ├── CapacitorBridge/
@@ -1704,42 +1745,7 @@
 │   │   │   │       ├── StudyRoomScreen.module.css
 │   │   │   │       └── StudyRoomScreen.tsx
 │   │   │   └── landing/
-│   │   │       ├── 01-hero/
-│   │   │       │   ├── Hero.module.css
-│   │   │       │   ├── Hero.tsx
-│   │   │       │   ├── heroContent.module.css
-│   │   │       │   ├── heroContent.tsx
-│   │   │       │   ├── heroFloatingContentIcons.module.css
-│   │   │       │   ├── heroFloatingContentIcons.tsx
-│   │   │       │   ├── heroNavbar.module.css
-│   │   │       │   ├── heroNavbar.tsx
-│   │   │       │   ├── heroScene.tsx
-│   │   │       │   └── index.ts
-│   │   │       ├── 02-ikigai/
-│   │   │       │   ├── CalendarMonth/
-│   │   │       │   │   ├── calendarData.ts
-│   │   │       │   │   ├── CalendarMonth.module.css
-│   │   │       │   │   ├── CalendarMonth.tsx
-│   │   │       │   │   ├── calendarMonth.types.ts
-│   │   │       │   │   ├── calendarTypes.ts
-│   │   │       │   │   └── calendarUtils.ts
-│   │   │       │   ├── FeatureSection.module.css
-│   │   │       │   ├── FeatureSection.tsx
-│   │   │       │   ├── Ikigai.tsx
-│   │   │       │   ├── ikigaiTimeline.module.css
-│   │   │       │   ├── ikigaiTimeline.tsx
-│   │   │       │   ├── index.ts
-│   │   │       │   ├── learningList.module.css
-│   │   │       │   ├── learningList.tsx
-│   │   │       │   ├── ProgressSection.module.css
-│   │   │       │   └── ProgressSection.tsx
-│   │   │       ├── 05-Features/
-│   │   │       │   ├── Features.tsx
-│   │   │       │   └── index.ts
-│   │   │       ├── 06-footer/
-│   │   │       │   ├── Footer.tsx
-│   │   │       │   └── index.ts
-│   │   │       ├── ReconstructedHero/
+│   │   │       ├── Hero/
 │   │   │       │   ├── components/
 │   │   │       │   │   ├── CentralInterface.tsx
 │   │   │       │   │   ├── CollageLeft.tsx
@@ -1747,9 +1753,15 @@
 │   │   │       │   │   ├── Flourishes.tsx
 │   │   │       │   │   ├── HeaderNav.tsx
 │   │   │       │   │   └── ThemeToggle.tsx
-│   │   │       │   ├── ReconstructedHero.module.css
-│   │   │       │   └── ReconstructedHero.tsx
-│   │   │       └── .gitkeep
+│   │   │       │   ├── Hero.module.css
+│   │   │       │   ├── Hero.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── Section2/
+│   │   │       │   ├── index.ts
+│   │   │       │   ├── Section2.module.css
+│   │   │       │   └── Section2.tsx
+│   │   │       ├── .gitkeep
+│   │   │       └── index.ts
 │   │   └── utils/
 │   │       ├── haptics.ts
 │   │       └── isNative.ts
@@ -1902,4 +1914,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-568 directories, 1332 files
+572 directories, 1340 files
