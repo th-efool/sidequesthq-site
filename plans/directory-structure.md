@@ -360,10 +360,7 @@
 │   ├── reference-analysis.md
 │   ├── reference.jpg
 │   ├── render-preview-1024.png
-│   ├── render-preview-1440.png
-│   ├── test-input-focused.png
-│   ├── test-input-selected-text.png
-│   └── test-input-selected.png
+│   └── render-preview-1440.png
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -596,6 +593,7 @@
 │   │   └── hero.webm
 │   ├── favicon.ico
 │   ├── undone-logo-dark.png
+│   ├── undone-logo-dark.svg
 │   ├── undone-logo-light.png
 │   ├── undone-logo-transparent.svg
 │   ├── undone-logo.ico
@@ -877,6 +875,7 @@
 │   │   │   ├── usePullToRefresh.ts
 │   │   │   ├── useSession.ts
 │   │   │   ├── useSessions.ts
+│   │   │   ├── useTheme.ts
 │   │   │   └── useToast.ts
 │   │   ├── mobile/
 │   │   │   ├── components/
@@ -1742,13 +1741,12 @@
 │   │   │       │   └── index.ts
 │   │   │       ├── ReconstructedHero/
 │   │   │       │   ├── components/
-│   │   │       │   │   ├── BackgroundColorPicker.module.css
-│   │   │       │   │   ├── BackgroundColorPicker.tsx
 │   │   │       │   │   ├── CentralInterface.tsx
 │   │   │       │   │   ├── CollageLeft.tsx
 │   │   │       │   │   ├── CollageRight.tsx
 │   │   │       │   │   ├── Flourishes.tsx
-│   │   │       │   │   └── HeaderNav.tsx
+│   │   │       │   │   ├── HeaderNav.tsx
+│   │   │       │   │   └── ThemeToggle.tsx
 │   │   │       │   ├── ReconstructedHero.module.css
 │   │   │       │   └── ReconstructedHero.tsx
 │   │   │       └── .gitkeep
@@ -1904,4 +1902,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-568 directories, 1334 files
+568 directories, 1332 files
