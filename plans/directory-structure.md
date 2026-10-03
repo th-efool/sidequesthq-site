@@ -51,6 +51,8 @@
 │   └── README.md
 ├── .agents/
 │   └── skills/
+│       ├── image-to-code/
+│       │   └── SKILL.md
 │       ├── prisma-cli/
 │       │   ├── references/
 │       │   │   ├── agent-safety.md
@@ -129,15 +131,70 @@
 │       │   │   ├── endpoints.md
 │       │   │   └── prisma7-client.md
 │       │   └── SKILL.md
-│       └── prisma-upgrade-v7/
+│       ├── prisma-upgrade-v7/
+│       │   ├── references/
+│       │   │   ├── accelerate-users.md
+│       │   │   ├── driver-adapters.md
+│       │   │   ├── env-variables.md
+│       │   │   ├── esm-support.md
+│       │   │   ├── prisma-config.md
+│       │   │   ├── removed-features.md
+│       │   │   └── schema-changes.md
+│       │   └── SKILL.md
+│       └── ui-image-to-code/
+│           ├── agents/
+│           │   └── openai.yaml
+│           ├── assets/
+│           │   ├── starter-production/
+│           │   │   ├── app.js
+│           │   │   ├── index.html
+│           │   │   ├── styles.css
+│           │   │   ├── ui-studio-overrides.css
+│           │   │   └── ui-studio-structure.js
+│           │   └── studio-template.zip
 │           ├── references/
-│           │   ├── accelerate-users.md
-│           │   ├── driver-adapters.md
-│           │   ├── env-variables.md
-│           │   ├── esm-support.md
-│           │   ├── prisma-config.md
-│           │   ├── removed-features.md
-│           │   └── schema-changes.md
+│           │   ├── capture-control-protocol-v1.md
+│           │   ├── codex-studio-roundtrip.md
+│           │   ├── codex-website-capture.md
+│           │   ├── delivery-hard-gate-v1.md
+│           │   ├── evidence-map-schema.md
+│           │   ├── fidelity-95-gate.md
+│           │   ├── implementation-and-qa.md
+│           │   ├── interaction-motion-evidence-v1.md
+│           │   ├── orchestration-workflow.md
+│           │   ├── project-menu-scan.md
+│           │   ├── screenshot-recognition-v4.md
+│           │   ├── ui-analysis.md
+│           │   ├── ui-document-schema.md
+│           │   ├── ui-generation-spec.md
+│           │   └── visual-editor-mode.md
+│           ├── scripts/
+│           │   ├── audit_icon_assets.py
+│           │   ├── capture_project_menu_snapshot.mjs
+│           │   ├── compile_interaction_spec.py
+│           │   ├── compile_ui_spec.py
+│           │   ├── delivery_gate_smoke.py
+│           │   ├── evidence_job_smoke.py
+│           │   ├── finalize_ui_to_studio.py
+│           │   ├── interaction_evidence_smoke.py
+│           │   ├── prepare_ui_contract.py
+│           │   ├── prepare_ui_job.py
+│           │   ├── prepare_website_capture.py
+│           │   ├── project_menu_contract_smoke.py
+│           │   ├── project_menu_scan_smoke.py
+│           │   ├── record_source_generation.py
+│           │   ├── scaffold_studio.py
+│           │   ├── scan_project_menu.py
+│           │   ├── score_visual_fidelity.py
+│           │   ├── studio_finalize_smoke.py
+│           │   ├── studio_template_regression.py
+│           │   ├── ui_job_status.py
+│           │   ├── validate_capture_protocol.py
+│           │   ├── validate_delivery_gate.py
+│           │   ├── validate_evidence_map.py
+│           │   ├── validate_project_menu.py
+│           │   ├── validate_website_capture.py
+│           │   └── verify_studio_contract.py
 │           └── SKILL.md
 ├── .github/
 │   └── workflows/
@@ -278,6 +335,15 @@
 │   ├── gradlew.bat
 │   ├── settings.gradle
 │   └── variables.gradle
+├── artifacts/
+│   ├── asset-research.md
+│   ├── collage-spec.md
+│   ├── design-system.md
+│   ├── execution-plan.md
+│   ├── implementation-plan.md
+│   ├── layout-spec.md
+│   ├── reference-analysis.md
+│   └── reference.jpg
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -381,6 +447,28 @@
 │   │   │   ├── cloud2.webp
 │   │   │   ├── cloud3.webp
 │   │   │   └── explore-hero.webp
+│   │   ├── hero-collage/
+│   │   │   ├── compass-mark.svg
+│   │   │   ├── l1-window-photo.png
+│   │   │   ├── l2-ideas-paper.png
+│   │   │   ├── l3-botanical.png
+│   │   │   ├── l4-mountains.png
+│   │   │   ├── l5-curiosity-note.png
+│   │   │   ├── l6-moon-circle.png
+│   │   │   ├── l7-blue-scrap.png
+│   │   │   ├── paper-bg.png
+│   │   │   ├── r1-galaxy.png
+│   │   │   ├── r2-curious-tomorrow.png
+│   │   │   ├── r3-disciplines.png
+│   │   │   ├── r4-origami-crane.png
+│   │   │   ├── r5-map-scrap.png
+│   │   │   ├── r6-mug-books.png
+│   │   │   ├── r7-cathedral.png
+│   │   │   ├── r8-collect-repeat.png
+│   │   │   ├── r9-blue-banner.png
+│   │   │   ├── star-doodle.svg
+│   │   │   ├── tape-strip.png
+│   │   │   └── underline-flourish.svg
 │   │   ├── home/
 │   │   │   ├── crow.webp
 │   │   │   └── home-hero.webp
@@ -461,13 +549,19 @@
 │   │   │   └── 9.webm
 │   │   └── hero.webm
 │   ├── favicon.ico
+│   ├── undone-logo-dark.png
+│   ├── undone-logo-light.png
 │   ├── undone-logo.ico
+│   ├── undone-logo.png
 │   └── undone-logo.svg
 ├── scripts/
+│   ├── crop-server.mjs
+│   ├── cropper.html
 │   ├── db-backup.mjs
 │   ├── inspect_db.ts
 │   ├── mobile-build.mjs
 │   ├── mobile-release-aab.mjs
+│   ├── prepare-cropper.mjs
 │   ├── seedNotesData.ts
 │   ├── test-import-github.ts
 │   ├── test-import-notion.ts
@@ -1597,6 +1691,15 @@
 │   │   │       ├── 06-footer/
 │   │   │       │   ├── Footer.tsx
 │   │   │       │   └── index.ts
+│   │   │       ├── ReconstructedHero/
+│   │   │       │   ├── components/
+│   │   │       │   │   ├── CentralInterface.tsx
+│   │   │       │   │   ├── CollageLeft.tsx
+│   │   │       │   │   ├── CollageRight.tsx
+│   │   │       │   │   ├── Flourishes.tsx
+│   │   │       │   │   └── HeaderNav.tsx
+│   │   │       │   ├── ReconstructedHero.module.css
+│   │   │       │   └── ReconstructedHero.tsx
 │   │   │       └── .gitkeep
 │   │   └── utils/
 │   │       ├── haptics.ts
@@ -1748,4 +1851,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-552 directories, 1194 files
+563 directories, 1286 files
