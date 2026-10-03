@@ -817,6 +817,10 @@
 │   │   │   │   │   ├── Card.module.css
 │   │   │   │   │   ├── Card.tsx
 │   │   │   │   │   └── index.ts
+│   │   │   │   ├── CohortCard/
+│   │   │   │   │   ├── CohortCard.module.css
+│   │   │   │   │   ├── CohortCard.tsx
+│   │   │   │   │   └── index.ts
 │   │   │   │   ├── CommandPalette/
 │   │   │   │   │   ├── CommandPalette.module.css
 │   │   │   │   │   ├── CommandPalette.tsx
@@ -1778,6 +1782,7 @@
 │   │   │       │   │   ├── CentralInterface.tsx
 │   │   │       │   │   ├── CollageLeft.tsx
 │   │   │       │   │   ├── CollageRight.tsx
+│   │   │       │   │   ├── FeaturedCohortsStrip.tsx
 │   │   │       │   │   ├── Flourishes.tsx
 │   │   │       │   │   ├── HeaderNav.tsx
 │   │   │       │   │   └── ThemeToggle.tsx
@@ -1924,6 +1929,7 @@
 │   │   └── mobile/
 │   │       └── cohortStaticParams.ts
 │   └── middleware.ts
+├── .env.local
 ├── .gitignore
 ├── .npmrc
 ├── .prettierignore
@@ -1952,4 +1958,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-577 directories, 1373 files
+578 directories, 1378 files
