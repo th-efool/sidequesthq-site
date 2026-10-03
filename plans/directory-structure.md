@@ -360,7 +360,10 @@
 │   ├── reference-analysis.md
 │   ├── reference.jpg
 │   ├── render-preview-1024.png
-│   └── render-preview-1440.png
+│   ├── render-preview-1440.png
+│   ├── test-input-focused.png
+│   ├── test-input-selected-text.png
+│   └── test-input-selected.png
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -852,6 +855,10 @@
 │   │   │       │   ├── Slider.css
 │   │   │       │   ├── Slider.tsx
 │   │   │       │   └── SliderProgressEngine.tsx
+│   │   │       ├── TextBar/
+│   │   │       │   ├── index.ts
+│   │   │       │   ├── TextBar.module.css
+│   │   │       │   └── TextBar.tsx
 │   │   │       ├── Tooltip/
 │   │   │       │   ├── index.ts
 │   │   │       │   ├── Tooltip.module.css
@@ -1735,6 +1742,8 @@
 │   │   │       │   └── index.ts
 │   │   │       ├── ReconstructedHero/
 │   │   │       │   ├── components/
+│   │   │       │   │   ├── BackgroundColorPicker.module.css
+│   │   │       │   │   ├── BackgroundColorPicker.tsx
 │   │   │       │   │   ├── CentralInterface.tsx
 │   │   │       │   │   ├── CollageLeft.tsx
 │   │   │       │   │   ├── CollageRight.tsx
@@ -1895,4 +1904,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-567 directories, 1326 files
+568 directories, 1334 files
