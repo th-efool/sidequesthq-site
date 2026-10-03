@@ -208,6 +208,8 @@
 │   ├── cand2.jpg
 │   ├── cand3.jpg
 │   ├── extract.mjs
+│   ├── mug_book.jpg
+│   ├── mug_stack.jpg
 │   ├── st_peters.jpg
 │   └── unsplash.html
 ├── android/
@@ -358,8 +360,7 @@
 │   ├── reference-analysis.md
 │   ├── reference.jpg
 │   ├── render-preview-1024.png
-│   ├── render-preview-1440.png
-│   └── render-preview-fullscreen.png
+│   └── render-preview-1440.png
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -500,6 +501,10 @@
 │   │   │   ├── real-paper-texture.jpg
 │   │   │   ├── real-window-person.jpg
 │   │   │   ├── star-doodle.svg
+│   │   │   ├── torn-paper-bottom-left.svg
+│   │   │   ├── torn-paper-bottom-right.svg
+│   │   │   ├── torn-paper-top-left.svg
+│   │   │   ├── torn-paper-top-right.svg
 │   │   │   └── underline-flourish.svg
 │   │   ├── home/
 │   │   │   ├── crow.webp
@@ -1880,7 +1885,8 @@
 ├── skills-lock.json
 ├── task.md
 ├── tsconfig.json
+├── tsconfig.tsbuildinfo
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-567 directories, 1314 files
+567 directories, 1320 files
