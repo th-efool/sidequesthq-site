@@ -211,7 +211,8 @@
 │   ├── mug_book.jpg
 │   ├── mug_stack.jpg
 │   ├── st_peters.jpg
-│   └── unsplash.html
+│   ├── unsplash.html
+│   └── video_processing_report.json
 ├── android/
 │   ├── app/
 │   │   ├── src/
@@ -362,8 +363,7 @@
 │   ├── render-preview-1024.png
 │   ├── render-preview-1440.png
 │   ├── render-preview-dark.png
-│   ├── render-preview-light.png
-│   └── test-divider-transparent.png
+│   └── render-preview-light.png
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -391,6 +391,8 @@
 │   │       ├── v1-designs (4).png
 │   │       └── v1-designs (5).png
 │   └── ChatGPT Image Aug 11, 2026, 12_24_28 PM.png
+├── directives/
+│   └── process_video.md
 ├── docs/
 │   ├── reference/
 │   │   ├── docs-blueprint.md
@@ -415,6 +417,7 @@
 │   ├── prisma-schema-cohort.md
 │   └── study-rooms-schema.md
 ├── execution/
+│   ├── process_video.py
 │   └── test_publish_and_verify.ts
 ├── future-plan/
 │   ├── 01.png
@@ -449,7 +452,8 @@
 │   ├── design-css-tokens.md
 │   ├── directory-structure.md
 │   ├── UX_IMPROVEMENT_AUDIT.md
-│   └── UX_PHASED_IMPLEMENTATION_PLAN.md
+│   ├── UX_PHASED_IMPLEMENTATION_PLAN.md
+│   └── video-explainer.tsx
 ├── prisma/
 │   ├── db_backup.json
 │   ├── schema.prisma
@@ -593,7 +597,31 @@
 │   │   │   ├── 7.webm
 │   │   │   ├── 8.webm
 │   │   │   └── 9.webm
-│   │   └── hero.webm
+│   │   ├── hls/
+│   │   │   ├── explainer.m3u8
+│   │   │   ├── segment_000.ts
+│   │   │   ├── segment_001.ts
+│   │   │   ├── segment_002.ts
+│   │   │   ├── segment_003.ts
+│   │   │   ├── segment_004.ts
+│   │   │   ├── segment_005.ts
+│   │   │   ├── segment_006.ts
+│   │   │   ├── segment_007.ts
+│   │   │   ├── segment_008.ts
+│   │   │   ├── segment_009.ts
+│   │   │   ├── segment_010.ts
+│   │   │   ├── segment_011.ts
+│   │   │   ├── segment_012.ts
+│   │   │   ├── segment_013.ts
+│   │   │   ├── segment_014.ts
+│   │   │   ├── segment_015.ts
+│   │   │   ├── segment_016.ts
+│   │   │   ├── segment_017.ts
+│   │   │   ├── segment_018.ts
+│   │   │   ├── segment_019.ts
+│   │   │   └── segment_020.ts
+│   │   ├── hero.webm
+│   │   └── undone-investor-film.mp4
 │   ├── favicon.ico
 │   ├── undone-logo-dark.png
 │   ├── undone-logo-dark.svg
@@ -1756,10 +1784,20 @@
 │   │   │       │   ├── Hero.module.css
 │   │   │       │   ├── Hero.tsx
 │   │   │       │   └── index.ts
-│   │   │       ├── Section2/
+│   │   │       ├── Ikigai/
+│   │   │       │   ├── Ikigai.module.css
+│   │   │       │   ├── Ikigai.tsx
+│   │   │       │   └── index.ts
+│   │   │       ├── VideoExplainer/
+│   │   │       │   ├── components/
+│   │   │       │   │   ├── VideoControls.tsx
+│   │   │       │   │   └── VideoPlayer.tsx
+│   │   │       │   ├── hooks/
+│   │   │       │   │   ├── useHlsVideo.ts
+│   │   │       │   │   └── useVideoKeyboardControls.ts
 │   │   │       │   ├── index.ts
-│   │   │       │   ├── Section2.module.css
-│   │   │       │   └── Section2.tsx
+│   │   │       │   ├── VideoExplainer.module.css
+│   │   │       │   └── VideoExplainer.tsx
 │   │   │       ├── .gitkeep
 │   │   │       └── index.ts
 │   │   └── utils/
@@ -1914,4 +1952,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-572 directories, 1340 files
+577 directories, 1373 files
