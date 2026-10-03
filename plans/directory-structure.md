@@ -489,7 +489,13 @@
 │   │   │   ├── cloud3.webp
 │   │   │   └── explore-hero.webp
 │   │   ├── hero-collage/
+│   │   │   ├── blue-ribbon-line-1.svg
+│   │   │   ├── blue-ribbon-line-2.svg
+│   │   │   ├── blue-ribbon-line-3.svg
 │   │   │   ├── compass-mark.svg
+│   │   │   ├── parchment-diagonal-left.svg
+│   │   │   ├── parchment-wing-left.svg
+│   │   │   ├── parchment-wing-right.svg
 │   │   │   ├── real-botanical.svg
 │   │   │   ├── real-cathedral.jpg
 │   │   │   ├── real-galaxy.jpg
@@ -1889,4 +1895,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-567 directories, 1320 files
+567 directories, 1326 files
