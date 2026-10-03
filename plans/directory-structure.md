@@ -198,6 +198,18 @@
 │           └── SKILL.md
 ├── .github/
 │   └── workflows/
+├── .tmp/
+│   ├── cand_bw_window.jpg
+│   ├── cand_lean_window.jpg
+│   ├── cand_paper.jpg
+│   ├── cand_sill.jpg
+│   ├── cand_sweater_window.jpg
+│   ├── cand1.jpg
+│   ├── cand2.jpg
+│   ├── cand3.jpg
+│   ├── extract.mjs
+│   ├── st_peters.jpg
+│   └── unsplash.html
 ├── android/
 │   ├── app/
 │   │   ├── src/
@@ -336,6 +348,7 @@
 │   ├── settings.gradle
 │   └── variables.gradle
 ├── artifacts/
+│   ├── asset-manifest.md
 │   ├── asset-research.md
 │   ├── collage-spec.md
 │   ├── design-system.md
@@ -343,7 +356,10 @@
 │   ├── implementation-plan.md
 │   ├── layout-spec.md
 │   ├── reference-analysis.md
-│   └── reference.jpg
+│   ├── reference.jpg
+│   ├── render-preview-1024.png
+│   ├── render-preview-1440.png
+│   └── render-preview-fullscreen.png
 ├── assets/
 │   ├── fonts/
 │   │   ├── Caveat-Bold.ttf
@@ -473,25 +489,17 @@
 │   │   │   └── explore-hero.webp
 │   │   ├── hero-collage/
 │   │   │   ├── compass-mark.svg
-│   │   │   ├── l1-window-photo.png
-│   │   │   ├── l2-ideas-paper.png
-│   │   │   ├── l3-botanical.png
-│   │   │   ├── l4-mountains.png
-│   │   │   ├── l5-curiosity-note.png
-│   │   │   ├── l6-moon-circle.png
-│   │   │   ├── l7-blue-scrap.png
-│   │   │   ├── paper-bg.png
-│   │   │   ├── r1-galaxy.png
-│   │   │   ├── r2-curious-tomorrow.png
-│   │   │   ├── r3-disciplines.png
-│   │   │   ├── r4-origami-crane.png
-│   │   │   ├── r5-map-scrap.png
-│   │   │   ├── r6-mug-books.png
-│   │   │   ├── r7-cathedral.png
-│   │   │   ├── r8-collect-repeat.png
-│   │   │   ├── r9-blue-banner.png
+│   │   │   ├── real-botanical.svg
+│   │   │   ├── real-cathedral.jpg
+│   │   │   ├── real-galaxy.jpg
+│   │   │   ├── real-map.jpg
+│   │   │   ├── real-moon.jpg
+│   │   │   ├── real-mountains.jpg
+│   │   │   ├── real-mug-books.jpg
+│   │   │   ├── real-origami-crane.svg
+│   │   │   ├── real-paper-texture.jpg
+│   │   │   ├── real-window-person.jpg
 │   │   │   ├── star-doodle.svg
-│   │   │   ├── tape-strip.png
 │   │   │   └── underline-flourish.svg
 │   │   ├── home/
 │   │   │   ├── crow.webp
@@ -575,17 +583,16 @@
 │   ├── favicon.ico
 │   ├── undone-logo-dark.png
 │   ├── undone-logo-light.png
+│   ├── undone-logo-transparent.svg
 │   ├── undone-logo.ico
 │   ├── undone-logo.png
 │   └── undone-logo.svg
 ├── scripts/
-│   ├── crop-server.mjs
-│   ├── cropper.html
 │   ├── db-backup.mjs
+│   ├── download-real-assets.mjs
 │   ├── inspect_db.ts
 │   ├── mobile-build.mjs
 │   ├── mobile-release-aab.mjs
-│   ├── prepare-cropper.mjs
 │   ├── seedNotesData.ts
 │   ├── test-import-github.ts
 │   ├── test-import-notion.ts
@@ -1876,4 +1883,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-566 directories, 1308 files
+567 directories, 1314 files
