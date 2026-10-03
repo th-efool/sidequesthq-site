@@ -401,6 +401,30 @@
 │   ├── 02a.png
 │   ├── 02b.png
 │   └── 03.png
+├── generated/
+│   └── prisma/
+│       ├── runtime/
+│       │   ├── client.d.ts
+│       │   ├── client.js
+│       │   ├── index-browser.d.ts
+│       │   ├── index-browser.js
+│       │   └── wasm-compiler-edge.js
+│       ├── client.d.ts
+│       ├── client.js
+│       ├── default.d.ts
+│       ├── default.js
+│       ├── edge.d.ts
+│       ├── edge.js
+│       ├── index-browser.js
+│       ├── index.d.ts
+│       ├── index.js
+│       ├── package.json
+│       ├── query_compiler_fast_bg.js
+│       ├── query_compiler_fast_bg.wasm
+│       ├── query_compiler_fast_bg.wasm-base64.js
+│       ├── schema.prisma
+│       ├── wasm-edge-light-loader.mjs
+│       └── wasm-worker-loader.mjs
 ├── plans/
 │   ├── design-css-tokens.md
 │   ├── directory-structure.md
@@ -1838,6 +1862,7 @@
 ├── eslint.config.mjs
 ├── excalidraw.d.ts
 ├── GEMINI.md
+├── next-env.d.ts
 ├── next.config.ts
 ├── package.json
 ├── phasewise.md
@@ -1851,4 +1876,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-563 directories, 1286 files
+566 directories, 1308 files
