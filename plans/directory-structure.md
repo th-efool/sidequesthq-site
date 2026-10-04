@@ -427,6 +427,7 @@
 │   ├── feed-architecture.md
 │   ├── FLOW_OF_SOLUTION.md
 │   ├── prisma-schema-cohort.md
+│   ├── PRODUCT_DESCRIPTION.md
 │   └── study-rooms-schema.md
 ├── generated/
 │   └── prisma/
@@ -455,6 +456,7 @@
 ├── plans/
 │   ├── design-css-tokens.md
 │   ├── directory-structure.md
+│   ├── seo-maximization-plan.md
 │   ├── UX_IMPROVEMENT_AUDIT.md
 │   ├── UX_PHASED_IMPLEMENTATION_PLAN.md
 │   └── video-explainer.tsx
@@ -629,7 +631,17 @@
 │   │   │   └── segment_020.ts
 │   │   ├── hero.webm
 │   │   └── undone-investor-film.mp4
+│   ├── apple-touch-icon.png
+│   ├── favicon-16x16.png
+│   ├── favicon-32x32.png
 │   ├── favicon.ico
+│   ├── icon-192.png
+│   ├── icon-512.png
+│   ├── icon-maskable-192.png
+│   ├── icon-maskable-512.png
+│   ├── og-image.png
+│   ├── site.webmanifest
+│   ├── twitter-image.png
 │   ├── undone-logo-dark.png
 │   ├── undone-logo-dark.svg
 │   ├── undone-logo-light.png
@@ -641,6 +653,7 @@
 │   ├── db-backup.mjs
 │   ├── dev.mjs
 │   ├── download-real-assets.mjs
+│   ├── generate-social-assets.mjs
 │   ├── inspect_db.ts
 │   ├── mobile-build.mjs
 │   ├── mobile-release-aab.mjs
@@ -776,9 +789,15 @@
 │   │   │   └── typography.css
 │   │   ├── terms/
 │   │   │   └── page.tsx
+│   │   ├── apple-icon.png
 │   │   ├── favicon.ico
 │   │   ├── globals.css
-│   │   └── layout.tsx
+│   │   ├── icon.png
+│   │   ├── layout.tsx
+│   │   ├── opengraph-image.png
+│   │   ├── robots.ts
+│   │   ├── sitemap.ts
+│   │   └── twitter-image.png
 │   ├── client/
 │   │   ├── archive/
 │   │   │   └── landing/
@@ -1801,6 +1820,15 @@
 │   │   │       │   ├── Ikigai.module.css
 │   │   │       │   ├── Ikigai.tsx
 │   │   │       │   └── index.ts
+│   │   │       ├── LandingContent/
+│   │   │       │   ├── CallToAction.tsx
+│   │   │       │   ├── CommunitySection.tsx
+│   │   │       │   ├── FAQSection.tsx
+│   │   │       │   ├── FeaturesBento.tsx
+│   │   │       │   ├── HowItWorks.tsx
+│   │   │       │   ├── index.ts
+│   │   │       │   ├── InterstitialSection.tsx
+│   │   │       │   └── LandingContent.module.css
 │   │   │       ├── VideoExplainer/
 │   │   │       │   ├── components/
 │   │   │       │   │   ├── VideoControls.tsx
@@ -1962,4 +1990,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-573 directories, 1387 files
+574 directories, 1414 files
