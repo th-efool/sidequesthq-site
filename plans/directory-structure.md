@@ -406,6 +406,7 @@
 │   └── process_video.md
 ├── docs/
 │   ├── reference/
+│   │   ├── css-layout.md
 │   │   ├── docs-blueprint.md
 │   │   ├── docs-sdk.md
 │   │   ├── docs-tutorial.md
@@ -427,14 +428,6 @@
 │   ├── FLOW_OF_SOLUTION.md
 │   ├── prisma-schema-cohort.md
 │   └── study-rooms-schema.md
-├── execution/
-│   ├── process_video.py
-│   └── test_publish_and_verify.ts
-├── future-plan/
-│   ├── 01.png
-│   ├── 02a.png
-│   ├── 02b.png
-│   └── 03.png
 ├── generated/
 │   └── prisma/
 │       ├── runtime/
@@ -511,14 +504,10 @@
 │   │   │   ├── blue-ribbon-line-2.svg
 │   │   │   ├── blue-ribbon-line-3.svg
 │   │   │   ├── compass-mark.svg
-│   │   │   ├── parchment-bottom-cradle-left.svg
-│   │   │   ├── parchment-bottom-cradle-right.svg
 │   │   │   ├── parchment-diagonal-left.svg
 │   │   │   ├── parchment-edge-corner-left.svg
 │   │   │   ├── parchment-edge-corner-right.svg
 │   │   │   ├── parchment-mid-fill-right.svg
-│   │   │   ├── parchment-parabolic-swoop-left.svg
-│   │   │   ├── parchment-parabolic-swoop-right.svg
 │   │   │   ├── parchment-wing-left.svg
 │   │   │   ├── parchment-wing-right.svg
 │   │   │   ├── real-botanical.svg
@@ -648,7 +637,6 @@
 │   ├── undone-logo.ico
 │   ├── undone-logo.png
 │   └── undone-logo.svg
-├── scratch/
 ├── scripts/
 │   ├── db-backup.mjs
 │   ├── download-real-assets.mjs
@@ -1955,7 +1943,6 @@
 ├── build-aab.bat
 ├── capacitor.config.ts
 ├── CLAUDE.md
-├── css-layout.md
 ├── docker-compose.yml
 ├── eslint.config.mjs
 ├── excalidraw.d.ts
@@ -1963,16 +1950,14 @@
 ├── next-env.d.ts
 ├── next.config.ts
 ├── package.json
-├── phasewise.md
 ├── postcss.config.mjs
 ├── prisma.config.ts
 ├── README.md
 ├── render.yaml
 ├── skills-lock.json
-├── task.md
 ├── tsconfig.json
 ├── tsconfig.tsbuildinfo
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-576 directories, 1397 files
+573 directories, 1385 files
