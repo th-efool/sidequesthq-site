@@ -196,9 +196,20 @@
 │           │   ├── validate_website_capture.py
 │           │   └── verify_studio_contract.py
 │           └── SKILL.md
-├── .github/
-│   └── workflows/
 ├── .tmp/
+│   ├── textures/
+│   │   ├── free_paper_27.jpg
+│   │   ├── Pergament.1.jpg
+│   │   ├── Pergament.2.jpg
+│   │   ├── raw_texture-kraft-fibers.jpg
+│   │   ├── raw_texture-paper-crumpled.jpg
+│   │   ├── raw_texture-parchment-antique.jpg
+│   │   ├── raw_texture-parchment-deckle.jpg
+│   │   ├── raw_texture-parchment-warm.jpg
+│   │   ├── thumb_raw_texture-parchment-antique.jpg.jpg
+│   │   ├── thumb_raw_texture-parchment-deckle.jpg.jpg
+│   │   ├── thumb_raw_texture-parchment-warm.jpg.jpg
+│   │   └── vintage_paper.jpg
 │   ├── cand_bw_window.jpg
 │   ├── cand_lean_window.jpg
 │   ├── cand_paper.jpg
@@ -500,7 +511,14 @@
 │   │   │   ├── blue-ribbon-line-2.svg
 │   │   │   ├── blue-ribbon-line-3.svg
 │   │   │   ├── compass-mark.svg
+│   │   │   ├── parchment-bottom-cradle-left.svg
+│   │   │   ├── parchment-bottom-cradle-right.svg
 │   │   │   ├── parchment-diagonal-left.svg
+│   │   │   ├── parchment-edge-corner-left.svg
+│   │   │   ├── parchment-edge-corner-right.svg
+│   │   │   ├── parchment-mid-fill-right.svg
+│   │   │   ├── parchment-parabolic-swoop-left.svg
+│   │   │   ├── parchment-parabolic-swoop-right.svg
 │   │   │   ├── parchment-wing-left.svg
 │   │   │   ├── parchment-wing-right.svg
 │   │   │   ├── real-botanical.svg
@@ -1890,7 +1908,6 @@
 │   │   │   │       ├── schema/
 │   │   │   │       │   └── index.ts
 │   │   │   │       └── client.ts
-│   │   │   ├── external/
 │   │   │   └── workflows/
 │   │   │       ├── cohortCleanupTask.ts
 │   │   │       ├── cohortVectorizationWorkflow.ts
@@ -1958,4 +1975,4 @@
 ├── tsconfig.worker.json
 └── vitest.config.mts
 
-578 directories, 1378 files
+576 directories, 1397 files
