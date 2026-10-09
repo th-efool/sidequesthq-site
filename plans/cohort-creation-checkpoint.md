@@ -6,9 +6,21 @@ Updated: 2026-10-09 (Asia/Calcutta).
 
 All remaining functional phases are authorized, in order: 3B.2 durable execution → 3B.3 material acquisition/discovery → 3C.1 processing/build → 3C.2 review/refinement → 3C.3 finalization/delivery → 3C.4 validation. Phase 4 is not authorized. Do not redo 3A/3B.1. Accepted baseline commit: a8fabac. Preserve all current working changes.
 
-## Current milestone: 3B.3 — DURABLE TEXT ACQUISITION VALIDATED; UPLOAD WIRING NEXT
+## Current milestone: 3B.3 — TEXT UPLOAD/PASTE/DROP WIRED AND VALIDATED
 
-Durable recommendation execution/storage/retention (3B.2) and text acquisition jobs are implemented and validated, with live Mongo connection still blocked. The authenticated draft API can select an already retained owned text upload, enqueue acquisition, cancel/retry and resume its saved result. There is no end-user upload/paste/drop screen or endpoint yet. Latest user steering requests small, thorough, token-efficient milestones; work solo rather than restarting three parallel agents.
+Durable recommendation execution/storage/retention (3B.2), text acquisition jobs, and end-user text/Markdown upload/paste/drop are implemented and validated with fixtures. Live Mongo connection remains blocked. Latest user steering requests small, thorough, token-efficient milestones and sequential meaningful commits; work solo rather than restarting three parallel agents.
+
+### Latest completed milestone: upload/paste/drop
+
+Added authenticated POST /api/cohort-creation/drafts/[draftId]/uploads. Owner load, UUID, base revision, starting branch, active-work and source-count checks precede body consumption. Raw Blob streaming reuses MaterialBlobStore ownership, aggregate quota, checksum, completion and cleanup. Only UTF-8 text/Markdown MIME types are accepted, with a 1 MiB ceiling, no truncation, a 30-second deadline, sanitized failures and explicit abort handling. Readers cancel/release even if reservation rejects before iteration. SQL reservation reauthorizes ownership; upload completion alone never changes source selection or navigation. Interrupted/unaccepted bytes remain reclaimable through existing retention.
+
+One functional material step handles paste, file picker and drag/drop. The client first receives an opaque retained reference, then sends acquire_text against the captured draft revision. Another-tab intent changes cannot attach old uploads to newer state. Existing durable event observation, cancellation, retry and resume are reused; reload never reuploads selected sources. Failed uploads retain local input for retry. Controls disable while upload/queue/acquisition is active; a rejected drop clears the previous selection. Find-material/goal discovery and curriculum continuation remain explicitly unavailable.
+
+Validation: 17 Vitest files / 145 tests PASS, including 25 new tests for HTTP authorization, invalid IDs, stale revisions, scope/byte limits, cancellation during pending reads, reader cleanup, sanitized outages, paste/file/drop, acknowledgment failure, stale attachment and reload without duplicate work. TypeScript PASS; scoped ESLint PASS; diff checks PASS. No live Mongo/AI/SQL calls, migrations, new dependencies, build or complete browser journey in this milestone. The prior Mongo ENOTFOUND and unapplied deployment SQL remain blockers to claiming a deployed end-to-end flow.
+
+Sequential implementation commits: 27d4266 (owned upload boundary/tests/plan), 4eb566c (material UI/client plumbing/tests). Changed-file inventory: plans/cohort-creation-phase-3b3-materials.md; src/app/api/cohort-creation/drafts/[draftId]/uploads/route.ts; src/server/domain/cohort-creation/upload.http.ts and __tests__/upload.test.ts; src/client/screens/cohortCreation/CreationExperience.tsx, CreationExperience.module.css, components/StartingPoint.tsx, components/TextMaterial.tsx, hooks/useCreation.ts, services/materialApi.ts, __tests__/CreationExperience.test.tsx, __tests__/TextMaterial.test.tsx; this checkpoint. No legacy creation/AI changes or pushes. A separate documentation commit records this milestone.
+
+**Exact next operation:** inspect source replacement/invalidation/pin-release contracts and repository CAS, then implement a bounded source removal/replacement milestone with owner/revision tests and UI recovery for rejected/oversized sources. Follow with external material adapters and grounded discovery in small ordered milestones. Do not recreate jobs/storage or start processing/review/publication/Phase 4. Mongo live verification must wait for the environment DNS fix; public migrations remain a deployment step.
 
 ### Latest completed milestone: durable text jobs
 
@@ -64,7 +76,7 @@ Initial smoke attempts: pooled DATABASE_URL failed with 08P01 startup options; D
 
 This pass: focused Vitest 12 files / 93 tests PASS; TypeScript PASS; scoped ESLint PASS; worker import check PASS; git diff --check PASS. Files changed in this pass only: package.json (opt-in smoke script), scripts/creation-durability-smoke.ts (new), creationJob.repo.ts (factory, advisory lock scalar and slot generations), this checkpoint and creation-handoff-execution.md. Existing dirty/untracked work was preserved. No commits or pushes.
 
-**Exact next operation:** inspect existing authenticated routes, streaming request/upload conventions and StartingPoint/useCreation components. Write a bounded upload/paste/drop plan, then implement an owner-checked streaming text/Markdown upload boundary and functional have-material screen wired to acquire_text commands/replay/retry/cancel. Reuse MaterialBlobStore and TextAcquisitionService; do not redo job/storage infrastructure. Respect 25 MiB/file, 100 MiB/draft, 1 MiB extracted text/source and scope limits; interrupted/unaccepted uploads must remain reclaimable. Keep file picker/drop/paste states in one material step. Mongo ENOTFOUND remains an explicit live-verification blocker. External adapters/discovery, processing/review/publication/Phase 4 have not started.
+Previous next operation (now completed): owner-checked streaming text/Markdown upload and functional have-material screen wired to acquire_text commands/replay/retry/cancel. See the current milestone above for the next uncompleted operation. External adapters/discovery, processing/review/publication/Phase 4 have not started.
 
 ## Coordinated ownership
 
