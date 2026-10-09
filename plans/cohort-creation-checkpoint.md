@@ -6,9 +6,21 @@ Updated: 2026-10-09 (Asia/Calcutta).
 
 All remaining functional phases are authorized, in order: 3B.2 durable execution → 3B.3 material acquisition/discovery → 3C.1 processing/build → 3C.2 review/refinement → 3C.3 finalization/delivery → 3C.4 validation. Phase 4 is not authorized. Do not redo 3A/3B.1. Accepted baseline commit: a8fabac. Preserve all current working changes.
 
-## Current milestone: 3B.3 — TEXT UPLOAD/PASTE/DROP WIRED AND VALIDATED
+## Current milestone: 3B.3 — SOURCE REMOVAL/REPLACEMENT VALIDATED
 
-Durable recommendation execution/storage/retention (3B.2), text acquisition jobs, and end-user text/Markdown upload/paste/drop are implemented and validated with fixtures. Live Mongo connection remains blocked. Latest user steering requests small, thorough, token-efficient milestones and sequential meaningful commits; work solo rather than restarting three parallel agents.
+Durable recommendation execution/storage/retention (3B.2), text acquisition jobs, end-user text/Markdown input, and source removal/replacement are implemented and validated with fixtures. Live Mongo connection remains blocked. Latest user steering requests small, thorough, token-efficient milestones and sequential meaningful commits; work solo rather than restarting three parallel agents.
+
+### Latest completed milestone: source recovery
+
+Added remove_material to existing typed commands/flow. Idle have-material drafts can remove a selected source and its extraction; revision/inputRevision advance, accepted intent and other sources remain, errors/replay identity clear. Active work and unknown source IDs are rejected. Existing DraftService owner load and CAS remain authoritative. Ordinary draft CAS now locks/validates the previous snapshot and releases detached unpublished storage pins in the same transaction as the persisted snapshot/event. A shared helper reuses the previous enqueue detachment rule, deduplicates IDs, preserves references still used by another source, and excludes published objects. Bytes are reclaimed later; removal does not synchronously delete blobs.
+
+The material panel offers remove and replacement actions. Replacement reuses acquire_text with the same material ID; the old selection remains until upload acknowledgment and captured-revision enqueue succeed. A validated optional X-Creation-Material upload header permits replacing an existing source at the twenty-source limit. A failed upload/stale mutation cannot discard the old source. Source-local extraction invalidation preserves other extraction references. If a replacement target disappears from canonical state, the UI requires explicit cancellation rather than silently converting it into a new-source upload.
+
+Validation: 17 Vitest files / 155 tests PASS (ten additional tests); TypeScript PASS; scoped ESLint PASS; creation:worker:check PASS; diff checks PASS. Tests cover owner rejection, stale/lost removal response, resume, late results, targeted replacement, shared-reference and published-pin SQL predicates, selection-limit replacement, failed replacement preservation and disappeared targets. Database/storage are mocked for this milestone; no live SQL/Mongo/AI calls, production migration, new dependency, build or complete browser journey. Existing Mongo ENOTFOUND and deployment SQL blockers remain.
+
+Sequential implementation commits: bdf751a (commands/atomic pin cleanup/upload guard/server tests/plan), 9b1a65c (client recovery controls/tests). Changed files: plans/cohort-creation-phase-3b3-materials.md; src/shared/cohort-creation/flow.ts; src/server/infrastructure/db/postgres/repositories/creationMaterialRefs.ts, creationDraft.repo.ts, creationJob.repo.ts; src/server/domain/cohort-creation/upload.http.ts, __tests__/draft-repository.test.ts, __tests__/material-jobs.test.ts, __tests__/upload.test.ts; src/client/screens/cohortCreation/CreationExperience.tsx, components/TextMaterial.tsx, hooks/useCreation.ts, services/materialApi.ts, __tests__/CreationExperience.test.tsx, __tests__/TextMaterial.test.tsx; this checkpoint. No legacy changes, migrations or pushes. A separate documentation commit records the resume point.
+
+**Exact next operation:** inspect existing URL/import fetch protections and source/location contracts, then plan a bounded retained web/article acquisition foundation. Reuse private storage and durable fencing. Validate HTTP(S), redirects/DNS/private-network denial, time/byte/source limits, retained actual content and provenance; never use metadata as extracted content or invent sources. Connect one production adapter in a subsequent bounded milestone. Remaining external adapters (YouTube/PDF/GitHub/Notion) and grounded discovery follow before 3C processing. Mongo live verification remains blocked by environment DNS; public migrations remain a deployment step. No Phase 4.
 
 ### Latest completed milestone: upload/paste/drop
 
@@ -20,7 +32,7 @@ Validation: 17 Vitest files / 145 tests PASS, including 25 new tests for HTTP au
 
 Sequential implementation commits: 27d4266 (owned upload boundary/tests/plan), 4eb566c (material UI/client plumbing/tests). Changed-file inventory: plans/cohort-creation-phase-3b3-materials.md; src/app/api/cohort-creation/drafts/[draftId]/uploads/route.ts; src/server/domain/cohort-creation/upload.http.ts and __tests__/upload.test.ts; src/client/screens/cohortCreation/CreationExperience.tsx, CreationExperience.module.css, components/StartingPoint.tsx, components/TextMaterial.tsx, hooks/useCreation.ts, services/materialApi.ts, __tests__/CreationExperience.test.tsx, __tests__/TextMaterial.test.tsx; this checkpoint. No legacy creation/AI changes or pushes. A separate documentation commit records this milestone.
 
-**Exact next operation:** inspect source replacement/invalidation/pin-release contracts and repository CAS, then implement a bounded source removal/replacement milestone with owner/revision tests and UI recovery for rejected/oversized sources. Follow with external material adapters and grounded discovery in small ordered milestones. Do not recreate jobs/storage or start processing/review/publication/Phase 4. Mongo live verification must wait for the environment DNS fix; public migrations remain a deployment step.
+Previous next operation (now completed): source removal/replacement with owner/revision tests and recovery UI. See the current milestone above for the next uncompleted operation.
 
 ### Latest completed milestone: durable text jobs
 
