@@ -6,9 +6,21 @@ Updated: 2026-10-09 (Asia/Calcutta).
 
 All remaining functional phases are authorized, in order: 3B.2 durable execution → 3B.3 material acquisition/discovery → 3C.1 processing/build → 3C.2 review/refinement → 3C.3 finalization/delivery → 3C.4 validation. Phase 4 is not authorized. Do not redo 3A/3B.1. Accepted baseline commit: a8fabac. Preserve all current working changes.
 
-## Current milestone: 3B.2 — IMPLEMENTATION VALIDATED; LIVE MONGO BLOCKED
+## Current milestone: 3B.3 — RETAINED TEXT FOUNDATION VALIDATED
 
-The interrupted implementation has been recovered and jointly checked. Durable recommendation enqueue/worker/checkpoints, revision/lease fencing, persistent budgets, event replay, client observation and private storage foundations are on disk. No later sub-phase has started. Latest user steering requests small, thorough, token-efficient milestones; work solo for bounded follow-ups rather than restarting three parallel agents.
+Durable recommendation execution/storage/retention (3B.2) is implemented and validated, with live Mongo connection still blocked. The first bounded 3B.3 milestone now defines retained material manifests and implements deterministic text/Markdown acquisition behind a service. There is no end-user material input/job wiring yet. Latest user steering requests small, thorough, token-efficient milestones; work solo rather than restarting three parallel agents.
+
+### Latest completed bounded milestone
+
+Plan: cohort-creation-phase-3b3-materials.md. Reused existing MaterialSource/SourceLocation/ExtractedContent contracts and private storage interfaces. Added shared material selection limits (20 sources/100 units), opaque retained object references, manifest/extraction contracts and semantic checks for complete contiguous segment coverage, source/unit identities and artifact consistency.
+
+Text extraction retains exact UTF-8 source text, including BOM and CRLF, and explicit UTF-16 offsets. Deterministic segment/version identities, Markdown headings/fenced code and surrogate-safe segment boundaries preserve provenance without executing markup. Reject invalid UTF-8, empty/binary control content, bad checksums and the approved 1 MiB extracted-text limit; no truncation. A technical 20,000-segment artifact bound also produces an explicit scope error. Segments are extraction anchors, not pedagogical chunks or an AI token window.
+
+TextAcquisitionService reads an already owned retained text/Markdown upload, validates complete content, writes an immutable text-extraction artifact with input revision/parser/checksum fingerprint, and returns a ready manifest proposal. It does not mutate draft state/navigation or pin an unaccepted artifact. The future fenced checkpoint must accept/pin proposals. No uploads, endpoints, source persistence, material jobs, external adapters, discovery, processing, review or publication were added in this bounded milestone.
+
+Validation: 14 Vitest files / 111 tests PASS; TypeScript PASS; scoped ESLint PASS; staged diff checks PASS. All new storage service tests use mocks; no live Mongo/SQL/AI calls in this milestone. No migration or dependency changes.
+
+Sequential commits: 9e92826 defines material contracts/plan; f77a3d0 implements text parser/acquisition and 14 focused tests. Changed files: plans/cohort-creation-phase-3b3-materials.md; src/shared/cohort-creation/materials.ts; src/server/domain/cohort-creation/materials/text.ts; src/server/domain/cohort-creation/materials/text-acquisition.service.ts; src/server/domain/cohort-creation/__tests__/text-acquisition.test.ts; this checkpoint. A separate documentation commit records this resume point. No pushes.
 
 Deployment and live verification remaining:
 
@@ -42,7 +54,7 @@ Initial smoke attempts: pooled DATABASE_URL failed with 08P01 startup options; D
 
 This pass: focused Vitest 12 files / 93 tests PASS; TypeScript PASS; scoped ESLint PASS; worker import check PASS; git diff --check PASS. Files changed in this pass only: package.json (opt-in smoke script), scripts/creation-durability-smoke.ts (new), creationJob.repo.ts (factory, advisory lock scalar and slot generations), this checkpoint and creation-handoff-execution.md. Existing dirty/untracked work was preserved. No commits or pushes.
 
-**Exact next operation:** inspect the accepted Phase 2 material contracts and existing source/import infrastructure; write a bounded 3B.3 plan, then implement material contracts and Markdown/text acquisition first. Do not redo 3B.2. Keep Mongo ENOTFOUND as an explicit live-verification blocker; rerun the storage smoke when the environment is available. Grounded discovery, external adapters, processing and publication have not started. Phase 4 remains excluded.
+**Exact next operation:** inspect CreationSnapshot/flow/dependency primitives, draft service/repository, durable job kind/input/checkpoint and worker runner. Plan and implement the next bounded 3B.3 milestone: durable material selection/manifests and a typed acquisition job boundary, reusing existing tables/leases/events/fencing rather than creating parallel job/state infrastructure. Preserve recommendation behavior, decode old persisted snapshots safely, and atomically accept retained artifact references only for current owner/input revision/lease. Upload/paste/drop HTTP and screen wiring follows that boundary; no full external-adapter pass yet. Do not redo 3B.2 or the text parser. Mongo ENOTFOUND remains an explicit live-verification blocker. Processing/review/publication/Phase 4 have not started.
 
 ## Coordinated ownership
 
