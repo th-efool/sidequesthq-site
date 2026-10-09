@@ -1,0 +1,59 @@
+workflow:
+  name: Remaining functional cohort creation
+  description: Implement accepted architecture in dependency order; stop before visual fidelity.
+  version: "1.0.0"
+  inputs:
+    - name: repository
+      type: file_path
+      required: true
+      default: C:/Users/Dell/WebstormProjects/sidequesthq-site
+  agents:
+    ai_data:
+      name: Execution and AI specialist
+      role: Durable jobs, bounded AI operations and processing
+      retry: { max_attempts: 2, backoff: none, on_failure: abort }
+      validation:
+        rules: [Report exact changed files and checks, No fabricated results, Fenced durable writes]
+    design_system:
+      name: Storage and materials specialist
+      role: Private artifact storage and real material acquisition
+      retry: { max_attempts: 2, backoff: none, on_failure: abort }
+      validation:
+        rules: [Retain actual content and provenance, Enforce limits and ownership]
+    cohort_flow:
+      name: Application and delivery specialist
+      role: Integration review, workspace and authorized delivery
+      retry: { max_attempts: 2, backoff: none, on_failure: abort }
+      validation:
+        rules: [Deterministic application state, No private read leaks, Meaningful focused tests]
+  steps:
+    - id: durable_execution
+      type: parallel
+      parallel:
+        - { agent: ai_data, input: "3B.2 SQL queue, worker, budgets and event replay" }
+        - { agent: design_system, input: "3B.2 private blob/artifact storage and reconciliation" }
+        - { agent: cohort_flow, input: "3B.2 read-only boundary review and test recommendations" }
+      wait: all
+    - id: materials
+      type: parallel
+      parallel:
+        - { agent: ai_data, input: "Validated durable execution → 3B.3 grounded discovery and video observation" }
+        - { agent: design_system, input: "Validated durable execution → 3B.3 material adapters and uploads" }
+        - { agent: cohort_flow, input: "Validated durable execution → 3B.3 material workspace and typed flow" }
+      wait: all
+    - { id: processing, type: sequential, agent: ai_data, input: "Validated materials → 3C.1 processing/build" }
+    - { id: review, type: sequential, agent: cohort_flow, input: "Validated processing → 3C.2 review/refinement" }
+    - id: delivery
+      type: parallel
+      parallel:
+        - { agent: ai_data, input: "Validated review → 3C.3 artifacts-first publication" }
+        - { agent: cohort_flow, input: "Validated review → 3C.3 authorized feed and consumption" }
+        - { agent: design_system, input: "Validated review → 3C.3 private read-path checks and retention" }
+      wait: all
+    - id: validation
+      type: parallel
+      parallel:
+        - { agent: ai_data, input: "3C.4 publication/job fault-injection regression checks" }
+        - { agent: cohort_flow, input: "3C.4 complete browser journeys with mock AI" }
+        - { agent: design_system, input: "3C.4 acquisition/authorization integration checks" }
+      wait: all
