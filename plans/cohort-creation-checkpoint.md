@@ -2,6 +2,16 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
+## Latest completed milestone: durable selected-video observations
+
+Commits: 17875d4 (retained bundles), 70ea7fd (fenced jobs and per-video budgets), 0dead39 (generate/resume actions). Explicitly saved video choices now queue observe_youtube against the original retained metadata revision. Each completed unit is validated from owned content, pinned and checkpointed before another model call. Restart reuses retained observations, including non-prefix selections; stale and shrinking checkpoints cannot overwrite accepted work. Final artifacts are non-exhaustive AI observations with estimated timestamps, never transcripts. Aggregate observation text is capped at 1 MiB without truncation. Selection changes release detached observation/bundle pins while preserving unchanged selected units.
+
+Existing queue, owner/CAS checks, cancellation, NDJSON events, artifact storage and retention are reused. Video calls reserve 120-second model slots and at most two calls per job/video; recommendation budgets remain unchanged. Video jobs have a six-hour task deadline. UI reports actual retained unit counts and resumes partial work without reinspecting metadata. No new migration, dependency, legacy changes or Phase 4 work.
+
+Validation: 28 files / 303 tests PASS; TypeScript PASS; zero-warning scoped lint PASS; worker imports PASS; diff checks PASS. Expanded real PostgreSQL smoke PASS: duplicate enqueue, original metadata revision, per-video budget/slot expiry, wrong artifact type denial, partial reload, monotonic checkpoint protection, stale worker fencing, complete checkpoint finalization after deadline, deselection pin release and retention. Disposable schema removed; public migrations untouched. Artifact bodies were fixtures, not live Mongo/video/model results. Live Mongo and paid model paths remain unverified.
+
+Next: GitHub retained content and commit/path/line provenance, then user-scoped GitHub/Notion connectors and Notion extraction, grounded discovery, processing/review/finalization. Full Phase 3 is not operational yet. Older next-operation notes below are historical and superseded by this section.
+
 ## Authorization and baseline
 
 All remaining functional phases are authorized, in order: 3B.2 durable execution → 3B.3 material acquisition/discovery → 3C.1 processing/build → 3C.2 review/refinement → 3C.3 finalization/delivery → 3C.4 validation. Phase 4 is not authorized. Do not redo 3A/3B.1. Accepted baseline commit: a8fabac. Preserve all current working changes.
