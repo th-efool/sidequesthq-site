@@ -2,7 +2,13 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest completed milestone: retained Notion page text
+## Latest milestone: durable Notion jobs, functional controls next
+
+Notion commands now use existing authenticated owner/CAS/deduplication and job-budget boundaries. The queue recognizes acquire_notion, reserves remaining selected-unit capacity and grants six-minute task deadlines. Fenced checkpoints pin only correctly owned/typed/fingerprinted Notion receipts and extraction artifacts; accepted receipts/completed checkpoints cannot be replaced or regressed. Worker initial reads use the owner's connected Notion token; retained extraction uses no live connection. Provider Retry-After now schedules through existing nextRunAt and releases leases, with retryable failure when the deadline/budget cannot accommodate the minimum delay.
+
+Validation: five new Notion command/worker tests and eleven draft HTTP tests PASS; TypeScript PASS; scoped lint PASS; worker imports PASS; diff checks PASS. Expanded real PostgreSQL smoke is running, not yet confirmed. No live Notion/Mongo/model verification or new migration. Next: functional Notion source controls/retry and SQL recovery result, then grounded discovery. Processing, review/refinement, finalization/delivery and complete validation remain; full Phase 3 is not operational and Phase 4 is excluded.
+
+## Previous milestone: retained Notion page text
 
 Notion now has an owner-scoped, fixed-host read capability using the installed connector's 2022-06-28 API contract, bounded recursive pagination, observed page/block timestamps and explicit linked-page/media omissions. Private source receipts retain actual block JSON before deterministic text extraction. Block anchors and exact UTF-16 offsets preserve CRLF and emoji; manifests/checkpoints contain references and bounded metadata only. Retained extraction resumes without requesting credentials or refetching mutable page content. No Notion jobs or UI are exposed yet.
 
