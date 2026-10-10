@@ -2,7 +2,13 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest milestone: grounded discovery adapter and real source observation
+## Latest milestone: retained discovery session and resume
+
+DiscoveryService now proposes private immutable search, per-citation observation and validated selection receipts through the existing artifact repository. Checkpoints bind request/input/intent fingerprint, owned artifact checksums/sizes and real processed/total counts. Restart validates the receipt hierarchy and citation prefix, reuses accepted search/metadata/selection and preserves explicit per-source failures. Zero results are honest; the 20-candidate observation cap records remaining citations as explicit limit failures. The service cannot pin artifacts or advance application state; durable fenced acceptance is next.
+
+Validation: 45 creation files / 438 tests PASS; TypeScript, scoped lint and diff checks PASS. Seven retained-session tests cover partial/final restart, no repeated calls, owner/revision/ref tampering, failed checkpoint acknowledgement, malformed evidence/progress, unavailable candidate keys, zero results, cancellation and exposed scope limits. Latest live verification remains public TypeScript handbook metadata only. No paid grounding/Notion OAuth/Mongo call. Next: connect discovery command/job/checkpoint pinning, three-call budgets, confirmation UI and acquisition for find-material/goal branches. All 3C stages remain; Phase 3 is incomplete and Phase 4 remains gated.
+
+## Previous milestone: grounded discovery adapter and real source observation
 
 Grounded search now has a provider-independent ResourceDiscovery contract backed by the pinned Vercel SDK and Google's native search tool. Only provider URL-source records become citations; model prose URLs are ignored. Selection accepts only observed candidate keys, with at most one schema/semantic repair and a reservation callback per call. Search is one native tool step; no autonomous loop, URL invention or AI-controlled navigation. Bounded provider attribution remains opaque for later isolated rendering.
 
