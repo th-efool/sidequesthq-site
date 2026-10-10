@@ -2,7 +2,15 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest completed milestone: durable public GitHub acquisition
+## Latest completed milestone: owned connectors and draft return
+
+Commits: 934b26f (isolated credential schema/runtime/owned APIs/SQL smoke), dceee31 (account controls and owned return continuity). Installed Corsair 0.1.138 is configured lazily with managed GitHub/Notion plugins, creation-specific keys, multi-tenancy, opaque user-derived tenants, schema-qualified queries and an isolated search path. Legacy singleton and management route are unchanged. The new endpoint exposes only SDK-signed delivery, including signed browser GET in development; no broad management/tool routes are mounted. Workflow execution and automatic tunnels are disabled. Draft-owned status/connect/disconnect operations reject browser tenant fields and cross-origin mutations. A 30-minute HttpOnly continuation cookie returns an authenticated creator to the still-owned durable draft and survives sign-in/transient storage failure. Connections never imply acquired material.
+
+Validation: 36 files / 363 tests PASS, TypeScript PASS, scoped zero-warning lint PASS after resolving a React ref-handler diagnostic, worker imports PASS, diff PASS. Real PostgreSQL/installed SDK connector smoke PASS: provisioning, encrypted fixture credentials, owner isolation, scoped disconnect and isolated search path. Disposable schema removed. Initial pooled connection failed because Neon rejects startup search_path; runtime/smoke now prefer existing DIRECT_URL, documented in plans/cohort-creation-connectors.md. No live OAuth/Hub/private GitHub/Notion call, paid model or Mongo verification. Additive prisma/creation-connectors.sql must be deployed; creation-specific configuration and production Hub delivery URL are documented. No public migration applied, no pushes or Phase 4.
+
+Exact next operation: extend the existing GitHub selection/receipt/provider boundary for explicit connected acquisition, retrieve credentials only for the claimed job's owner, keep public mode unauthenticated, preserve commit/path/line provenance and retained restart behavior, then wire an explicit UI choice and tests. Next is bounded user-scoped Notion extraction, followed by grounded discovery and 3C. Full Phase 3 is not operational.
+
+## Previous milestone: durable public GitHub acquisition
 
 Commits: edaca7a (owned jobs/checkpoints/capacity), 2883ec2 (explicit paths/ref form and retries), 9f27235 (actionable command guard errors). GitHub now uses the existing authenticated command/CAS/queue/worker/private-artifact boundaries. A six-minute job retains a commit-bound receipt before exact line extraction; restart reads retained content without refetching. Scope and remaining global 100-unit capacity are checked at enqueue, acquisition, resume and completion. Fenced checkpoints pin only owned, correctly typed/fingerprinted artifacts and cannot regress or replace accepted source receipts. UI preserves explicit paths/ref and provider-specific retries. Manual retry of a branch is a new acquisition and may observe its newer commit; automatic job recovery reuses the retained commit.
 
