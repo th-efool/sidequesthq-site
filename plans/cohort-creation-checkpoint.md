@@ -2,7 +2,13 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest completed milestone: durable selected-video observations
+## Latest completed milestone: GitHub retained-content foundation
+
+Commits: 763d9d7 (bounded public provider/reader), 270d0c6 (private source receipts and exact line extraction). Selected public README/docs paths are resolved once to a commit/tree, traversed without following symlinks/submodules, checked against real Git blob SHA-1 and retained as exact UTF-8. Explicit omissions and selected-path coverage survive extraction. Raw text exists only in private artifacts; job checkpoints/manifests contain bounded file metadata and references. Owned extraction resumes from the retained receipt without network calls and rejects altered ownership, selection, source revision, bytes and anchors. The installed Corsair content endpoint requires credentials; the new public-only REST adapter is isolated from legacy singleton credentials, pins the still-supported/default 2022-11-28 API version, uses fixed endpoints and refuses redirects. Private connectors are not implemented yet.
+
+Validation: 30 files / 318 tests PASS; TypeScript PASS; zero-warning scoped lint PASS; worker imports PASS; diff PASS. Live public GitHub read succeeded against octocat/Hello-World README at commit 7fd1a60b01f91b314f59955a4e4d4e80d8edf11d: one file, 13 bytes, verified blob. No paid model or live Mongo call. GitHub is not yet connected to jobs/UI. Next operation: add acquire_github using existing owner/CAS/queue/checkpoint machinery, persist explicit path/ref scope on the source, reserve remaining global unit capacity, then add path-selection/retry UI and SQL recovery coverage. Remaining connectors/discovery/3C work is unchanged; full Phase 3 is not operational.
+
+## Previous milestone: durable selected-video observations
 
 Commits: 17875d4 (retained bundles), 70ea7fd (fenced jobs and per-video budgets), 0dead39 (generate/resume actions). Explicitly saved video choices now queue observe_youtube against the original retained metadata revision. Each completed unit is validated from owned content, pinned and checkpointed before another model call. Restart reuses retained observations, including non-prefix selections; stale and shrinking checkpoints cannot overwrite accepted work. Final artifacts are non-exhaustive AI observations with estimated timestamps, never transcripts. Aggregate observation text is capped at 1 MiB without truncation. Selection changes release detached observation/bundle pins while preserving unchanged selected units.
 
