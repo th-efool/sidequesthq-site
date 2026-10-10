@@ -6,7 +6,13 @@ Updated: 2026-10-10 (Asia/Calcutta).
 
 All remaining functional phases are authorized, in order: 3B.2 durable execution → 3B.3 material acquisition/discovery → 3C.1 processing/build → 3C.2 review/refinement → 3C.3 finalization/delivery → 3C.4 validation. Phase 4 is not authorized. Do not redo 3A/3B.1. Accepted baseline commit: a8fabac. Preserve all current working changes.
 
-## Current milestone: 3B.3 — DURABLE WEB ACQUISITION VALIDATED; PDF FOUNDATION NEXT
+## Current milestone: 3B.3 — PDF EXTRACTION FOUNDATION VALIDATED; DURABLE PDF WIRING NEXT
+
+Pinned pdfjs-dist 6.4.299. Added page-anchored, coverage-validated PDF artifacts, a retained-byte parser in a terminable Node worker thread, and an owned immutable acquisition service. Limits: 25 MiB raw PDF, 200 pages, 1 MiB UTF-8 extracted text, 45-second parser deadline, 128 MiB worker old-generation heap (not a total process-memory guarantee). Abort terminates the parser. PDF.js receives bytes only, with JavaScript evaluation/XFA/external fetching disabled and stopAtErrors enabled. Password/malformed/blank or image-only pages fail explicitly. No OCR. Completeness refers to page text-item extraction, not images, annotations or visual layout; raw PDF remains retained. Real generated PDF tests cover page anchors, deterministic coverage, malformed/checksum failures, limits and cancellation. Seven focused tests, TypeScript and scoped lint passed. No live Mongo or paid AI calls. Changed: package.json/package-lock.json; shared/pdf.ts; materials/pdf.ts, pdf-parser.worker.mjs, pdf-identity.ts, pdf-acquisition.service.ts; __tests__/pdf-acquisition.test.ts; materials plan and checkpoint.
+
+**Current next operation:** wire PDF into existing owned streaming upload, acquire_pdf command, durable worker/fenced checkpoints and same material panel; test recovery, authorization, type-specific limits and resume. No new queue or framework. Then continue remaining 3B.3 adapters/discovery and later 3C in dependency order. Phase 4 remains excluded.
+
+### Previous milestone: durable web acquisition
 
 Completed web job/UI integration in 07a2d4e, 29aa514 and 55fd752. Existing draft commands now accept normalized acquire_web URLs under owner/CAS checks. Existing queue/worker handles a fenced retained_web receipt checkpoint followed by a complete extraction manifest; restart reads retained bytes without refetching. All raw/receipt/extraction references are pinned under owner, input revision, checksum, artifact type/fingerprint and lease checks. Snapshot materialRefs defaults preserve old drafts and track pins before finalization, including partial/failed/canceled work, so removal/replacement/new intent releases every detached unpublished reference. Existing text checkpoint pins are tracked before completion too. Web deadline is 120 seconds; recommendation/text deadlines remain unchanged. No queue/schema migration or AI calls. Identity helpers stay independent of DOM imports on API/repository paths.
 
@@ -14,7 +20,7 @@ The existing material panel now accepts public article URLs, retry/cancel/replac
 
 Changed files for web integration: scripts/creation-durability-smoke.ts; src/shared/cohort-creation/contracts.ts, flow.ts, jobs.ts, web.ts; src/server/creation-worker.ts; src/server/domain/cohort-creation/draft.http.ts, draft.service.ts, durable-job.ts, durable-job.runner.ts, job-completion.ts, materials/web-acquisition.service.ts, web-extraction.ts, web-retention.service.ts, web-identity.ts, __tests__/draft.test.ts, draft-repository.test.ts, material-jobs.test.ts, upload.test.ts, web-jobs.test.ts; src/server/infrastructure/db/postgres/repositories/creationDraft.repo.ts, creationJob.repo.ts, creationMaterialRefs.ts; src/client/screens/cohortCreation/CreationExperience.tsx, components/TextMaterial.tsx, hooks/useCreation.ts, __tests__/CreationExperience.test.tsx, TextMaterial.test.tsx; this checkpoint.
 
-**Current next operation:** investigate official PDF.js Node text extraction against installed Node 24; implement a bounded retained-PDF parser/artifact foundation with page provenance, 25 MiB/200-page/1 MiB text limits, explicit encrypted/scanned/invalid handling and cancellation. No OCR/fabricated text. Then wire the existing upload/durable path rather than adding a separate job system. Continue remaining 3B.3 adapters/discovery and later 3C in dependency order, updating checkpoints and commits. Phase 4 remains excluded.
+Previous next operation (completed): retained PDF extraction foundation. See current milestone above.
 
 ### Previous completed milestone: article extraction
 
