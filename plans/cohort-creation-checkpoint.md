@@ -2,7 +2,13 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest milestone: durable Notion jobs, functional controls next
+## Latest milestone: connected Notion source controls
+
+Functional Notion selection now connects to the owned durable command. A pasted notion.so link opens explicit connected page selection; retry retains the material identity and uses Notion acquisition, never public web extraction. Failed queueing preserves the link, duplicate submissions are blocked, replacement restores saved scope and ready status names supported-text coverage/omissions. No visual fidelity work was performed.
+
+Validation: 42 creation test files / 416 tests PASS; TypeScript PASS; scoped UI lint PASS. The full suite initially exposed a missing server-only fixture mock after job completion gained Notion identity validation; the explicit mock now matches the other server-domain tests. Expanded SQL smoke remains in progress. No live Notion/Mongo/model verification. Next: confirm SQL recovery result, then grounded discovery for find-material/goal branches. All 3C stages remain; Phase 3 is not yet operational end to end.
+
+## Previous milestone: durable Notion jobs
 
 Notion commands now use existing authenticated owner/CAS/deduplication and job-budget boundaries. The queue recognizes acquire_notion, reserves remaining selected-unit capacity and grants six-minute task deadlines. Fenced checkpoints pin only correctly owned/typed/fingerprinted Notion receipts and extraction artifacts; accepted receipts/completed checkpoints cannot be replaced or regressed. Worker initial reads use the owner's connected Notion token; retained extraction uses no live connection. Provider Retry-After now schedules through existing nextRunAt and releases leases, with retryable failure when the deadline/budget cannot accommodate the minimum delay.
 
