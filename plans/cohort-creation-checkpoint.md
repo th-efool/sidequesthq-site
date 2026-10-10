@@ -2,7 +2,17 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest milestone: owned discovery command, worker and persistent budgets
+## Latest milestone: confirmed discovery sources and processing input foundation
+
+Discovery confirmation is wired for find-material and goal-only branches. Users inspect observed candidates, explicitly acquire web/YouTube sources or select GitHub refs/paths, cancel real work and resume selected-source controls. Acquisition retains search/observation provenance and artifact pins; exact-source retries preserve that provenance after a new search or branch change. Provider attribution has an owner-checked, no-store HTML endpoint isolated with CSP and iframe sandbox. No discovered metadata is represented as retained learning content.
+
+Validation: 48 creation files / 452 tests PASS before processing inputs; subsequent focused discovery/UI/attribution tests 14 PASS; TypeScript, scoped lint and diff checks PASS. Expanded real PostgreSQL smoke PASS: discovery ownership/CAS/deduplication, persistent three-call budget, typed private evidence, stale-worker fencing, restart, reload and detached pin release, alongside all prior acquisition/backoff/retention cases. The disposable schema was removed; public SQL was untouched. Stored bodies were fixtures, not live Mongo/provider/model results.
+
+Processing input foundation now normalizes existing retained Markdown, PDF, web, GitHub, Notion and video-observation schemas into exact source-bound segments. Partition identities bind artifact/version/content/anchors. Byte/selection/count limits fail explicitly without truncation. Video observations retain AI origin, estimated intervals and non-exhaustive limitations. Eight tests, TypeScript and scoped lint PASS. This is a pure boundary; owned reads and durable processing remain next. Commits: 6bd601c attribution, 4d81265 confirmation/provenance, 4fbe731 processing inputs. No Phase 4 work. Phase 3 is not operational end to end.
+
+Next: bounded structured understanding adapter, owner-scoped processing artifact reads and durable per-partition acceptance, then chunking/analysis/build, review/refinement, private/public delivery and complete functional validation. Paid Google grounding/structured output, real private connector acquisition and Mongo integration remain unverified.
+
+## Previous milestone: owned discovery command, worker and persistent budgets
 
 Both find_material and have_goal can now enqueue discover_material through existing authenticated CAS and duplicate-request handling. Discovery gets a distinct typed snapshot operation rather than a fake acquiring material. Existing lease/fencing, NDJSON events, cancellation and job retry are reused. Private search/observation/selection checkpoints pin only matching owned, typed and fingerprinted artifacts; progress cannot regress or replace accepted evidence. Detached intermediate receipt pins are released. Model calls require existing persistent owner/global slots plus a three-call per-job cap; discovery uses 90-second model slots and a 15-minute task deadline for bounded metadata work. Model construction is lazy so retained recovery does not require credentials unnecessarily.
 
