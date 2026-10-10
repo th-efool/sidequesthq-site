@@ -2,7 +2,15 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest milestone: connected Notion source controls
+## Latest milestone: grounded discovery adapter and real source observation
+
+Grounded search now has a provider-independent ResourceDiscovery contract backed by the pinned Vercel SDK and Google's native search tool. Only provider URL-source records become citations; model prose URLs are ignored. Selection accepts only observed candidate keys, with at most one schema/semantic repair and a reservation callback per call. Search is one native tool step; no autonomous loop, URL invention or AI-controlled navigation. Bounded provider attribution remains opaque for later isolated rendering.
+
+DiscoverySourceObserver resolves citations/grounding redirects through existing public HTTPS validation, DNS/IP pinning and response limits. It reads actual inert HTML titles or fixed-provider public GitHub/YouTube metadata, rejects privacy/identity mismatches and records redirects/title origin. Observations explicitly say contentRetained=false: actual material acquisition is still required after confirmation.
+
+Validation: fifteen focused discovery AI/observer tests PASS; TypeScript and scoped lint PASS. Live public observation PASS against https://www.typescriptlang.org/docs/handbook/intro.html, returning its actual handbook title through DNS-pinned HTTP. No paid Google grounding call, Notion OAuth, private source or Mongo verification. Notion acquisition remains validated by 416 creation tests and expanded real PostgreSQL smoke. Next: persist search/observation checkpoints, connect owned discovery jobs/budgets and explicit confirmation for find-material/goal branches. All 3C processing/review/delivery and final browser validation remain. Full Phase 3 is not operational; Phase 4 remains gated.
+
+## Previous milestone: connected Notion source controls
 
 Functional Notion selection now connects to the owned durable command. A pasted notion.so link opens explicit connected page selection; retry retains the material identity and uses Notion acquisition, never public web extraction. Failed queueing preserves the link, duplicate submissions are blocked, replacement restores saved scope and ready status names supported-text coverage/omissions. No visual fidelity work was performed.
 
