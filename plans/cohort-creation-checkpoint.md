@@ -2,7 +2,21 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest milestone: confirmed discovery sources and processing input foundation
+## Latest milestone: retained understanding foundation, not yet connected to durable jobs
+
+3B.3 discovery confirmation and real PostgreSQL recovery verification are complete as recorded below. 3C.1 now has exact retained-content normalization/partitioning, owner-scoped accepted-content reads, bounded Vercel structured understanding and per-partition private receipt/restart services. Partition identity includes source origin and scope limitations. Understanding validates segment evidence, rejects duplicate concepts and allows one separately reserved repair. Retained receipts bind frozen input fingerprint, request, partition/source/artifact/segment identity and actual model identity. The immutable full partition inventory supports later budget reservations; accepted receipt prefixes cannot regress or be replaced. SQL acceptance helpers validate request identity and pin only matching owned, ready, typed/fingerprinted artifacts.
+
+Validation: 53 creation files / 479 tests PASS; TypeScript, scoped zero-warning lint, worker import and diff checks PASS. Understanding/owned-content/storage/acceptance tests are fixtures and mock models. No paid AI call, live Mongo or private connector verification. Discovery PostgreSQL smoke passed using a disposable schema and fixture artifact bodies; schema removed. No migration/dependency/environment change in this checkpoint.
+
+Important boundary: these understanding services and pinning helpers are **not wired into CreationJobRepository, worker, commands, snapshot projections or UI yet**. No processing screen or fake ready state has been enabled. No 3C.2/3C.3/3C.4 completion claim. Full Phase 3 remains non-operational end to end; Phase 4 remains gated.
+
+Exact next checkpoint: introduce a typed frozen processing request using accepted materials/extractions/refs and intent; connect an owned CAS command to the existing enqueue/claim/runner/checkpoint/finish/cancel path. Add a distinct processing projection to creationSnapshotSchema rather than pretending a ready source is acquiring. Reuse UnderstandingService, ProcessingContentService and creationUnderstanding.repo.ts. Reserve persistent model slots only for inventory partition IDs, at most two calls per partition; preserve existing owner/global limits. Lock/fence before acceptance and pinning, append existing NDJSON events, and release detached receipt pins on source/intent invalidation. Verify owner/CAS/dedup/revision/cancel/restart/fencing and real PostgreSQL behavior before exposing processing controls. Continue chunking, analysis and build afterward; do not present understanding completion as curriculum completion.
+
+Current commits since discovery UI: 4fbe731 input normalization, a9814c4 discovery SQL verification, d24aaa2 understanding adapter, 5ba5f3c owned content reads, debe6b4 retained understanding, 573adfd scope-bound partition identities, c26777d inventory/acceptance guards. Discovery attribution/UI commits: 6bd601c and 4d81265.
+
+Remaining: durable processing integration and actual understanding/chunking/analyzing/building screens; review/editing and bounded refinement; artifacts-first private/public activation and receipts; access/feed/non-video delivery; complete browser/failure/race/regression/build validation. Live selected Google grounding/structured output, real private connector acquisition and Mongo remain unverified.
+
+## Previous milestone: confirmed discovery sources and processing input foundation
 
 Discovery confirmation is wired for find-material and goal-only branches. Users inspect observed candidates, explicitly acquire web/YouTube sources or select GitHub refs/paths, cancel real work and resume selected-source controls. Acquisition retains search/observation provenance and artifact pins; exact-source retries preserve that provenance after a new search or branch change. Provider attribution has an owner-checked, no-store HTML endpoint isolated with CSP and iframe sandbox. No discovered metadata is represented as retained learning content.
 

@@ -16,3 +16,11 @@ Validate with real existing extraction helpers and fixture observations: exact t
 4. Real processing/ready workspace projections and restart/cancel/stale-result tests.
 
 Review, publication and Phase 4 remain outside this checkpoint. No success or processing progress should be displayed before actual accepted work exists.
+
+## Completed foundation and next integration boundary
+
+The first checkpoint and bounded understanding adapter are implemented and committed. ProcessingContentService loads only accepted owned artifact IDs and checks type/body/version/selection; video units also match the saved metadata and observation references. UnderstandingService proposes immutable receipts per partition, validates retained receipts before reuse, and stops when checkpoint acknowledgement fails. The body-free checkpoint includes the complete immutable partition inventory and completed prefix. Shared contracts and SQL acceptance/pinning helpers exist, but no durable understanding job or processing UI is enabled yet.
+
+Next, extend the existing job and snapshot unions together with command/service/repository/worker integration. Preserve an immutable processing request, keep processing progress separate from material acquisition, fence every accepted receipt and validate partition-scoped model budgets against persisted inventory. Do not expose a start control until that whole vertical slice is tested. Then add later processing stages using the same retained-content and dependency boundaries.
+
+Verification at this boundary: 53 creation files / 479 tests pass, with TypeScript, scoped lint, worker imports and diff checks passing. No paid model calls. Real discovery SQL smoke passed separately; understanding SQL integration remains pending.
