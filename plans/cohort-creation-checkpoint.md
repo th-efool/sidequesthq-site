@@ -2,7 +2,15 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest completed milestone: GitHub retained-content foundation
+## Latest completed milestone: durable public GitHub acquisition
+
+Commits: edaca7a (owned jobs/checkpoints/capacity), 2883ec2 (explicit paths/ref form and retries), 9f27235 (actionable command guard errors). GitHub now uses the existing authenticated command/CAS/queue/worker/private-artifact boundaries. A six-minute job retains a commit-bound receipt before exact line extraction; restart reads retained content without refetching. Scope and remaining global 100-unit capacity are checked at enqueue, acquisition, resume and completion. Fenced checkpoints pin only owned, correctly typed/fingerprinted artifacts and cannot regress or replace accepted source receipts. UI preserves explicit paths/ref and provider-specific retries. Manual retry of a branch is a new acquisition and may observe its newer commit; automatic job recovery reuses the retained commit.
+
+Validation: full pre-connector suite 32 files / 330 tests PASS; three additional HTTP guard cases PASS; TypeScript PASS; zero-warning scoped lint PASS; worker imports PASS; diff PASS. Expanded real PostgreSQL smoke PASS, including GitHub duplicate enqueue, remaining unit capacity, foreign receipt rejection, retained checkpoint reload, stale lease denial, restart without refetch, ready extraction and pin release. Disposable schema removed; public migrations untouched; artifact bodies were fixtures. Earlier live public GitHub README observation passed; no live private connector/Mongo/paid model call.
+
+Current work: user-scoped connector foundation. New isolated creation_connectors SQL, lazy multi-tenant Corsair runtime, owned status/connect/disconnect service and narrow APIs are implemented but not yet committed/fully validated. Seventeen focused tests PASS, including installed SDK rejection of unsigned delivery. No broad SDK management/tool routes are exposed; legacy singleton/route unchanged. Next: encrypted-credential SQL isolation smoke, complete configuration/return-boundary notes and full checks, then connection UI/return continuity, private GitHub and bounded Notion extraction. Grounded discovery and all 3C stages remain. Full Phase 3 is not operational; Phase 4 remains excluded.
+
+## Previous milestone: GitHub retained-content foundation
 
 Commits: 763d9d7 (bounded public provider/reader), 270d0c6 (private source receipts and exact line extraction). Selected public README/docs paths are resolved once to a commit/tree, traversed without following symlinks/submodules, checked against real Git blob SHA-1 and retained as exact UTF-8. Explicit omissions and selected-path coverage survive extraction. Raw text exists only in private artifacts; job checkpoints/manifests contain bounded file metadata and references. Owned extraction resumes from the retained receipt without network calls and rejects altered ownership, selection, source revision, bytes and anchors. The installed Corsair content endpoint requires credentials; the new public-only REST adapter is isolated from legacy singleton credentials, pins the still-supported/default 2022-11-28 API version, uses fixed endpoints and refuses redirects. Private connectors are not implemented yet.
 
