@@ -2,7 +2,13 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest milestone: retained discovery session and resume
+## Latest milestone: owned discovery command, worker and persistent budgets
+
+Both find_material and have_goal can now enqueue discover_material through existing authenticated CAS and duplicate-request handling. Discovery gets a distinct typed snapshot operation rather than a fake acquiring material. Existing lease/fencing, NDJSON events, cancellation and job retry are reused. Private search/observation/selection checkpoints pin only matching owned, typed and fingerprinted artifacts; progress cannot regress or replace accepted evidence. Detached intermediate receipt pins are released. Model calls require existing persistent owner/global slots plus a three-call per-job cap; discovery uses 90-second model slots and a 15-minute task deadline for bounded metadata work. Model construction is lazy so retained recovery does not require credentials unnecessarily.
+
+Validation: 46 creation files / 445 tests PASS; TypeScript, scoped lint, worker imports and diff checks PASS. Seven new tests cover both branches, owner/CAS/deduplication, resume, finalization after deadline, canceled/stale results, checkpoint identity and scoped artifact pinning. Real discovery SQL smoke and user confirmation UI are still pending. No new migration or dependency. Next: real PostgreSQL discovery budget/fencing/recovery checks, then confirmation controls, isolated provider attribution and source acquisition. All 3C stages remain; Phase 3 is not operational end to end.
+
+## Previous milestone: retained discovery session and resume
 
 DiscoveryService now proposes private immutable search, per-citation observation and validated selection receipts through the existing artifact repository. Checkpoints bind request/input/intent fingerprint, owned artifact checksums/sizes and real processed/total counts. Restart validates the receipt hierarchy and citation prefix, reuses accepted search/metadata/selection and preserves explicit per-source failures. Zero results are honest; the 20-candidate observation cap records remaining citations as explicit limit failures. The service cannot pin artifacts or advance application state; durable fenced acceptance is next.
 
