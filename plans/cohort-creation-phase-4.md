@@ -79,4 +79,12 @@ Validation: 94 tests pass across 17 focused UI/HTTP/retention files, including p
 
 ## Resume point
 
+### Comparison gallery plan
+
+User requested persistent before/after pictures and an HTML gallery in `plans/before-after`, updated at every subsequent checkpoint. Capture the actual baseline CreationExperience from commit 33660b2 and the current CreationExperience with identical explicit fixture snapshots and viewports. Resolve only the creation hook and Next browser wrappers in an isolated local preview; never alter production authentication. Save desktop before/current and mobile current images for all nine reference states. Keep target PNGs separately labelled as design references. Pending screens remain labelled pending even when a current capture exists. Store reproducible preview/capture tooling under `scripts/creation-visual`; extracted baseline files and intermediate captures stay ignored under `.tmp`. Validate gallery links and image dimensions in a browser before committing.
+
+### 4.5 screen plan
+
+Re-inspected 6.png: step 2 indicator, editorial heading, source inventory at left, selected source/chunk details at right, actual duration/range/source labels and known work counts. Extend the existing chunk receipt reader with a partial, owner-scoped preview using its existing validation; do not generate or expose arbitrary artifact IDs. Show accepted chunks with source/evidence and duration-method labels, permit selection locally, and retain restart/cancel/back/analyze guards. No invented video player, completion scores or per-chunk progress. Reuse the scoped processing shell/styles where their geometry matches; validate partial/unknown/completed/error states, selection, ownership/revision races, mobile overflow and existing tests. Update the gallery immediately after this checkpoint.
+
 Completed visual checkpoints 4.0–4.4; next is **4.5 Chunking / 6.png**. Before edits, inspect 6.png, ChunkingProgress, its accepted receipt readers and the new scoped understanding read boundary. Plan and validate that screen independently. Later: 4.6 Analyzing, 4.7 Ready, 4.8 Review, 4.9 success dialog, then 4.10 integration/fidelity checks. Phase 4 is not complete.

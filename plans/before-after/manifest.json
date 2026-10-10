@@ -1,0 +1,95 @@
+{
+  "baseline": "33660b2",
+  "screens": [
+    {
+      "number": 2,
+      "name": "Recommendations",
+      "width": 1585,
+      "height": 992,
+      "checkpoint": 4.1,
+      "status": "Implemented; final fidelity review pending",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:02.947Z"
+    },
+    {
+      "number": 3,
+      "name": "Starting point",
+      "width": 1585,
+      "height": 992,
+      "checkpoint": 4.2,
+      "status": "Implemented; final fidelity review pending",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:04.388Z"
+    },
+    {
+      "number": 4,
+      "name": "Material input",
+      "width": 1585,
+      "height": 992,
+      "checkpoint": 4.3,
+      "status": "Implemented; final fidelity review pending",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:05.683Z"
+    },
+    {
+      "number": 5,
+      "name": "Understanding",
+      "width": 1585,
+      "height": 992,
+      "checkpoint": 4.4,
+      "status": "Implemented; final fidelity review pending",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:06.850Z"
+    },
+    {
+      "number": 6,
+      "name": "Chunking",
+      "width": 1586,
+      "height": 992,
+      "checkpoint": 4.5,
+      "status": "Pending visual checkpoint",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:07.861Z"
+    },
+    {
+      "number": 7,
+      "name": "Analyzing",
+      "width": 1586,
+      "height": 992,
+      "checkpoint": 4.6,
+      "status": "Pending visual checkpoint",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:08.866Z"
+    },
+    {
+      "number": 8,
+      "name": "Ready",
+      "width": 1584,
+      "height": 993,
+      "checkpoint": 4.7,
+      "status": "Pending visual checkpoint",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:09.844Z"
+    },
+    {
+      "number": 9,
+      "name": "Review",
+      "width": 1536,
+      "height": 1024,
+      "checkpoint": 4.8,
+      "status": "Pending visual checkpoint",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:11.013Z"
+    },
+    {
+      "number": 10,
+      "name": "Publication success",
+      "width": 1584,
+      "height": 993,
+      "checkpoint": 4.9,
+      "status": "Pending visual checkpoint",
+      "currentCommit": "8148019",
+      "capturedAt": "2026-10-10T22:49:12.009Z"
+    }
+  ]
+}
