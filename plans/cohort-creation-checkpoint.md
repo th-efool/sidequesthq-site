@@ -2,7 +2,15 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest completed milestone: owned connectors and draft return
+## Latest completed milestone: explicit connected GitHub acquisition
+
+Commits: 2635999 (owned token capability, connected receipt/scope binding, worker integration), f82b016 (explicit connected-source choice and retry preservation). Public selections still carry no connection field or credentials; old selection fingerprints remain compatible. Connected selections require the claimed owner's durable draft and connected tenant before the installed managed-token refresh boundary is used. Fixed-host GitHub transport disables redirects and never sends tokens to source/download URLs. Receipts bind access choice and actual repository privacy to the exact retained commit/files. Checkpoint recovery extracts owned retained text without live credentials/refetch. Token refresh waiting respects cancellation; an already dispatched SDK refresh can finish for the same tenant but cannot trigger late source work. Lazy connector pools close on worker shutdown.
+
+Validation: 37 files / 375 tests PASS, TypeScript PASS, scoped lint PASS after escaping a JSX apostrophe, worker imports PASS. Tests include connected capability mismatch, private provenance, fixed-host authorization, public no-authorization, owner denial, missing connection, malformed tokens, cancellation, connected/public deduplication conflict and owned retained restart. Earlier real connector SQL and GitHub durable SQL smokes passed; no new SQL migration was needed for connected selection. No live private OAuth/GitHub/Mongo/paid model verification; no pushes or Phase 4. Complete Phase 3 is not operational.
+
+Exact next operation: bounded owner-scoped Notion page/block acquisition with 2022-06-28 API semantics, pagination, depth-eight/2,000-block/1-MiB text limits, retained page/block revisions and explicit unsupported-media/link omissions. Preserve block provenance, reject mutable/incomplete/paginated/cyclic output rather than inventing content, then integrate retained receipts/extraction into existing durable jobs/UI. Grounded discovery and all 3C stages remain.
+
+## Previous milestone: owned connectors and draft return
 
 Commits: 934b26f (isolated credential schema/runtime/owned APIs/SQL smoke), dceee31 (account controls and owned return continuity). Installed Corsair 0.1.138 is configured lazily with managed GitHub/Notion plugins, creation-specific keys, multi-tenancy, opaque user-derived tenants, schema-qualified queries and an isolated search path. Legacy singleton and management route are unchanged. The new endpoint exposes only SDK-signed delivery, including signed browser GET in development; no broad management/tool routes are mounted. Workflow execution and automatic tunnels are disabled. Draft-owned status/connect/disconnect operations reject browser tenant fields and cross-origin mutations. A 30-minute HttpOnly continuation cookie returns an authenticated creator to the still-owned durable draft and survives sign-in/transient storage failure. Connections never imply acquired material.
 
