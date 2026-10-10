@@ -1,12 +1,20 @@
 # Cohort creation — resume checkpoint
 
-Updated: 2026-10-09 (Asia/Calcutta).
+Updated: 2026-10-10 (Asia/Calcutta).
 
 ## Authorization and baseline
 
 All remaining functional phases are authorized, in order: 3B.2 durable execution → 3B.3 material acquisition/discovery → 3C.1 processing/build → 3C.2 review/refinement → 3C.3 finalization/delivery → 3C.4 validation. Phase 4 is not authorized. Do not redo 3A/3B.1. Accepted baseline commit: a8fabac. Preserve all current working changes.
 
-## Current milestone: 3B.3 — CONTROLLED WEB FETCH/RETENTION FOUNDATION VALIDATED
+## Current milestone: 3B.3 — ARTICLE EXTRACTION VALIDATED; DURABLE WEB INTEGRATION NEXT
+
+Article extraction milestone completed in 0253640 (dependencies/plan) and 77b65cb (adapter/contracts/tests). Pinned @mozilla/readability 0.6.0 and runtime jsdom 29.1.1, plus dev @types/jsdom 30.0.0; existing lock/runtime jsdom version retained. Npm reported 66 repository-wide audit findings; no unrelated audit upgrades applied. Extended extraction origin to external and reused text segmentation without fabricating a raw source. Web artifacts carry retained response receipt, explicit main_article versus full_text_response scope, exact/normalized text format, complete anchors into extraction text, source checksum and parser/version/fingerprint. HTML DOM is inert: no scripts, no subresources, no HTML returned to UI. Explicit parsing bounds: 2 MiB raw HTML, 20,000 elements, depth 200; extracted text retains the approved 1 MiB ceiling without truncation. Password/empty/short/JS-only pages require accessible upload/paste. Main-article selection does not claim whole-page text coverage; full response bytes stay retained. Immutable manifest proposals do not pin or mutate drafts.
+
+Validation: 20 Vitest files / 222 tests PASS; typecheck PASS; scoped lint PASS; diff checks PASS. Script/resource suppression tested against jsdom 29's undici dispatcher (older ResourceLoader API is absent and was not used). Storage/DOM fixtures only, no new live network/DB/AI calls. Changed files: package.json, package-lock.json, plans/cohort-creation-phase-3b3-materials.md; src/shared/cohort-creation/materials.ts, web.ts; src/server/domain/cohort-creation/materials/text.ts, web-extraction.ts, web-acquisition.service.ts; __tests__/web-extraction.test.ts; this checkpoint. Mongo live retention and public migration deployment remain unverified/blocking. No pushes or Phase 4.
+
+**Current next operation:** extend existing durable jobs with acquire_web and a typed retained-response intermediate checkpoint, then complete manifest checkpoint. Reuse leases/CAS/pins/events; bind each receipt/source/URL/input revision/fingerprint, preserve raw/receipt pins across restart, reject stale results, and detach all web refs on removal/replacement/new intent. Connect URL input/retry/cancel in the same material panel, then run targeted tests/typecheck/lint and SQL smoke if feasible. Continue further 3B.3 milestones without requiring user continuation messages, updating this ledger and committing at each validated checkpoint.
+
+### Previous completed milestone: controlled fetch/retention
 
 Durable recommendation execution/storage/retention (3B.2), text acquisition jobs/input/recovery, and controlled web fetching/raw-response retention are implemented. Web extraction/job/UI wiring is still pending. Live Mongo connection remains blocked. Latest user steering requests small, thorough, token-efficient milestones and sequential meaningful commits; work solo rather than restarting three parallel agents.
 
