@@ -2,7 +2,15 @@
 
 Updated: 2026-10-10 (Asia/Calcutta).
 
-## Latest completed milestone: explicit connected GitHub acquisition
+## Latest completed milestone: retained Notion page text
+
+Notion now has an owner-scoped, fixed-host read capability using the installed connector's 2022-06-28 API contract, bounded recursive pagination, observed page/block timestamps and explicit linked-page/media omissions. Private source receipts retain actual block JSON before deterministic text extraction. Block anchors and exact UTF-16 offsets preserve CRLF and emoji; manifests/checkpoints contain references and bounded metadata only. Retained extraction resumes without requesting credentials or refetching mutable page content. No Notion jobs or UI are exposed yet.
+
+Validation: seven new retained acquisition tests PASS; TypeScript PASS; scoped lint and diff checks PASS. Tests cover owner/draft denial, stale revision, altered refs/observations, malformed projections/anchors, exact text and omissions, checkpoint interruption/restart, cancellation, capacity and mismatched page identity. Earlier reader/transport tests passed. No live Notion or Mongo verification. Full Phase 3 remains incomplete; Phase 4 remains excluded.
+
+Next: propagate provider Retry-After into existing durable retry scheduling, then add owned acquire_notion commands/jobs, fenced receipt pins, restart recovery and functional source UI. Grounded discovery and all processing/review/delivery/complete validation remain.
+
+## Previous milestone: explicit connected GitHub acquisition
 
 Commits: 2635999 (owned token capability, connected receipt/scope binding, worker integration), f82b016 (explicit connected-source choice and retry preservation). Public selections still carry no connection field or credentials; old selection fingerprints remain compatible. Connected selections require the claimed owner's durable draft and connected tenant before the installed managed-token refresh boundary is used. Fixed-host GitHub transport disables redirects and never sends tokens to source/download URLs. Receipts bind access choice and actual repository privacy to the exact retained commit/files. Checkpoint recovery extracts owned retained text without live credentials/refetch. Token refresh waiting respects cancellation; an already dispatched SDK refresh can finish for the same tenant but cannot trigger late source work. Lazy connector pools close on worker shutdown.
 
