@@ -8,8 +8,9 @@
       "height": 992,
       "checkpoint": 4.1,
       "status": "Implemented; final fidelity review pending",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:02.947Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:45.823Z",
+      "uncommittedCode": false
     },
     {
       "number": 3,
@@ -18,8 +19,9 @@
       "height": 992,
       "checkpoint": 4.2,
       "status": "Implemented; final fidelity review pending",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:04.388Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:46.889Z",
+      "uncommittedCode": false
     },
     {
       "number": 4,
@@ -28,8 +30,9 @@
       "height": 992,
       "checkpoint": 4.3,
       "status": "Implemented; final fidelity review pending",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:05.683Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:47.753Z",
+      "uncommittedCode": false
     },
     {
       "number": 5,
@@ -38,8 +41,9 @@
       "height": 992,
       "checkpoint": 4.4,
       "status": "Implemented; final fidelity review pending",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:06.850Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:48.582Z",
+      "uncommittedCode": false
     },
     {
       "number": 6,
@@ -47,9 +51,10 @@
       "width": 1586,
       "height": 992,
       "checkpoint": 4.5,
-      "status": "Pending visual checkpoint",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:07.861Z"
+      "status": "Implemented; final fidelity review pending",
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:49.381Z",
+      "uncommittedCode": false
     },
     {
       "number": 7,
@@ -58,8 +63,9 @@
       "height": 992,
       "checkpoint": 4.6,
       "status": "Pending visual checkpoint",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:08.866Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:50.038Z",
+      "uncommittedCode": false
     },
     {
       "number": 8,
@@ -68,8 +74,9 @@
       "height": 993,
       "checkpoint": 4.7,
       "status": "Pending visual checkpoint",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:09.844Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:50.693Z",
+      "uncommittedCode": false
     },
     {
       "number": 9,
@@ -78,8 +85,9 @@
       "height": 1024,
       "checkpoint": 4.8,
       "status": "Pending visual checkpoint",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:11.013Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:51.454Z",
+      "uncommittedCode": false
     },
     {
       "number": 10,
@@ -88,8 +96,9 @@
       "height": 993,
       "checkpoint": 4.9,
       "status": "Pending visual checkpoint",
-      "currentCommit": "8148019",
-      "capturedAt": "2026-10-10T22:49:12.009Z"
+      "currentCommit": "a40010d",
+      "capturedAt": "2026-10-10T22:57:52.088Z",
+      "uncommittedCode": false
     }
   ]
 }
