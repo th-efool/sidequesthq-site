@@ -16,6 +16,8 @@ Set the production Hub project's delivery URL to `<origin>/api/cohort-creation/c
 
 The exact delivery endpoint supports SDK-verified signed POST and signed browser GET (`d` token) for development. It uses the delivery-only SDK helper, not the broad management handler. No tenant listing, key access, workflow/call management route is mounted. Unsigned/forged requests fail before database credential writes. Application status/connect/disconnect endpoints are authenticated, draft-owned, provider-allowlisted and mutation-origin-checked. Responses expose connection state and a validated Hub URL, never tokens or tenant identifiers.
 
+The material workspace loads connection status only when requested. Connect responses set a 30-minute HttpOnly, SameSite=Lax continuation cookie scoped to `/quest/connections/return` (Secure on HTTPS). It contains only the current draft UUID. The fixed Hub return route checks authentication and current ownership again, redirects into the durable draft, and clears continuation. Sign-in and temporary database failure preserve the cookie for retry. Missing/invalid/foreign draft destinations safely return to `/quest/new`. Concurrent connection attempts in different tabs use the last successful continuation cookie; draft content remains durable and ownership checks still apply. Connection status alone never marks material ready or starts acquisition.
+
 Run the opt-in database check with:
 
 ```powershell
