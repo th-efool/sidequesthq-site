@@ -68,3 +68,15 @@ Validation: all 74 creation UI tests pass; TypeScript and scoped ESLint pass; di
 ### 4.4 screen plan
 
 Re-inspect 5.png and current UnderstandingProgress/contracts before changes. Extend the conversation shell to processing-understanding only. Use a centered heading and status pill above two panels: actual source inventory and accepted concepts/evidence. Derive counts from durable checkpoint/receipt data; use indeterminate progress when totals are unknown. Keep start/restart, cancel, back and chunk continuation guards. Do not load private artifacts through new unprotected paths or invent analysis content. Verify running, completed, canceled and empty checkpoint states with existing tests and production-component browser fixtures before commit.
+
+### 4.4 completed
+
+Understanding now uses the scoped conversation shell, four-stage indicator, source inventory, known partition progress and expandable concept cloud. Counts use accepted checkpoints; no known total means no percentage. Start/restart, cancel, back and chunk continuation retain existing guards. Removed obsolete “building unavailable” copy without presenting understanding as a completed curriculum. Sources without a retained title use a neutral source label; no fabricated thumbnails, concept scores or timelines.
+
+Integration necessity: snapshot checkpoints contain artifact references rather than concept bodies. Added a read-only owner-scoped `/understanding` endpoint, typed preview contract and partial preview method on the existing UnderstandingContentService. It reuses owned source reads and receipt checksum/fingerprint/evidence validation, rejects revision races and disables caching. It cannot generate, pin artifacts or mutate navigation. Client aborts superseded reads and hides previews that do not match the current revision.
+
+Validation: 94 tests pass across 17 focused UI/HTTP/retention files, including partial accepted reads, owner/anonymous/invalid IDs, stale revisions, aborts, preview reload, old-concept hiding and existing creation flows. TypeScript, scoped zero-warning ESLint and diff checks pass. Visible browser fixtures at 1585×992 and 390×844 cover accepted concepts, expandable summaries, actual 1/3 progress, unknown total and completed continuation; no page errors/overflow. Desktop/mobile screenshots inspected. No paid/live AI, database or blob smoke test was performed for this visual checkpoint. Differences remain in available art, thumbnail availability and dynamic content density; final cross-screen fidelity review is still pending.
+
+## Resume point
+
+Completed visual checkpoints 4.0–4.4; next is **4.5 Chunking / 6.png**. Before edits, inspect 6.png, ChunkingProgress, its accepted receipt readers and the new scoped understanding read boundary. Plan and validate that screen independently. Later: 4.6 Analyzing, 4.7 Ready, 4.8 Review, 4.9 success dialog, then 4.10 integration/fidelity checks. Phase 4 is not complete.
