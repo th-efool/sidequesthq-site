@@ -48,3 +48,13 @@ Validation: 14 existing creation UI tests pass; TypeScript and scoped zero-warni
 ### 4.2 screen plan
 
 Re-inspect 3.png. Keep the rail and tools; center the two-line 60px serif heading above three 350px-wide choice cards at the reference viewport. Cards use ~270px collage art, circular icon overlap, uppercase serif titles, 18px descriptions and a bottom-right blue circular arrow. Existing mountain/galaxy/cathedral photos, paper texture and blue doodles supply decorative assets. No screenshot artwork is baked into the UI. Preserve exact accessible option names, selected/disabled state and back command; selected choices remain changeable when material work is not running. Check the three commands, keyboard activation, desktop/mobile wrapping and missing/long content before commit.
+
+### 4.2 completed
+
+Three illustrated choices, shared inline ink underline, selected/disabled states, back navigation and starting workspace now reuse the scoped conversation shell. Suggestions dispatch existing branch commands; ambiguous/negated conversation requests show clarification rather than guessing. Existing material/discovery handlers remain in StartingWorkspace. Homepage photo/paper collages approximate the supplied artwork; the exact reference illustrations are unavailable and visual identity is not claimed.
+
+Validation: 14 creation UI tests, TypeScript, scoped ESLint and diff checks pass. Visible browser fixtures cover desktop 1585×992, mobile 390×844, keyboard activation, all three choices, dark theme and zero horizontal overflow/page errors. Desktop choice cards begin around y337, matching the reference composition. These are fixture checks, not live authenticated journeys.
+
+### 4.3 screen plan
+
+Re-inspected 4.png. Selected starting-point choices become compact, changeable controls above the material workspace. Center the two-line serif material heading and paper drop surface, reuse homepage edge photos/books and notes, and place actual retained sources below. Keep acquisition modes, adapter forms, replacements, upload cancellation, retries, source removal, video selection and all source limits intact. Move detailed technical limits into an accessible disclosure. Use only actual source URLs/retained metadata, never screenshot example material. Test existing material flows and visible browser file/link/drop/invalid-file states at desktop/mobile sizes. Discovery remains the existing grounded branch with scoped styling; no backend or acquisition behavior changes.
